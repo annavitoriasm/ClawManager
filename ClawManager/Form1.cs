@@ -66,5 +66,10 @@ namespace ClawManager
         {
 
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
