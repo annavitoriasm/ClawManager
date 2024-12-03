@@ -3,18 +3,23 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ManageUser;
 
 namespace ClawManager
 {
     public partial class Login : Form
     {
+        private readonly UserAuth user_auth;
+
         public Login()
         {
             InitializeComponent();
+            user_auth = new UserAuth();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -44,23 +49,28 @@ namespace ClawManager
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string username = txtLogin.Text;
+            string password = txtPass.Text;
+
             try
             {
-                if (txtLogin.Text.Equals("lilabaka") && txtPass.Text.Equals("awa"))
+                var user = user_auth.Authenticate(username, password);
+
+                if (user != null)
                 {
                     var home = new Form1();
-                    this.Hide(); 
+                    this.Hide();
                     home.ShowDialog();
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Credenciais inválidas.");
+                    MessageBox.Show("Credenciais inválidas. Por favor, tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+                MessageBox.Show($"Ocorreu um erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
