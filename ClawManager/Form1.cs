@@ -29,7 +29,8 @@ namespace ClawManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            var newProd = new CreateProd();
+            newProd.ShowDialog();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

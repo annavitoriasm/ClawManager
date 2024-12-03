@@ -56,6 +56,7 @@
             button1 = new Button();
             pictureBox2 = new PictureBox();
             button2 = new Button();
+            comboBox1 = new ComboBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -100,6 +101,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(62, 41, 71);
+            panel2.Controls.Add(comboBox1);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(label14);
             panel2.Controls.Add(label13);
@@ -386,6 +388,15 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click_1;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Editar", "Excluir" });
+            comboBox1.Location = new Point(997, 148);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(57, 23);
+            comboBox1.TabIndex = 17;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -449,5 +460,6 @@
         private Label label14;
         private Label label13;
         private Button button3;
+        private ComboBox comboBox1;
     }
 }
