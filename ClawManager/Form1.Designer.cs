@@ -33,6 +33,7 @@
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             panel2 = new Panel();
+            comboBox1 = new ComboBox();
             button3 = new Button();
             label14 = new Label();
             label13 = new Label();
@@ -56,7 +57,6 @@
             button1 = new Button();
             pictureBox2 = new PictureBox();
             button2 = new Button();
-            comboBox1 = new ComboBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -125,6 +125,15 @@
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Editar", "Excluir" });
+            comboBox1.Location = new Point(997, 148);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(57, 23);
+            comboBox1.TabIndex = 17;
+            // 
             // button3
             // 
             button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
@@ -136,6 +145,7 @@
             button3.Size = new Size(26, 26);
             button3.TabIndex = 16;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // label14
             // 
@@ -387,15 +397,6 @@
             button2.TabIndex = 1;
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click_1;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Editar", "Excluir" });
-            comboBox1.Location = new Point(997, 148);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(57, 23);
-            comboBox1.TabIndex = 17;
             // 
             // Form1
             // 

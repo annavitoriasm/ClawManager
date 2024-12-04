@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateProd));
             btnCloseCreate = new Button();
             panel2 = new Panel();
+            label16 = new Label();
             label15 = new Label();
             panel12 = new Panel();
             panel11 = new Panel();
@@ -64,7 +65,6 @@
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
-            pictureBox8 = new PictureBox();
             label4 = new Label();
             btCancel = new Button();
             btnCreateProd = new Button();
@@ -74,7 +74,6 @@
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -88,14 +87,12 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnCloseCreate
@@ -115,6 +112,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(43, 27, 50);
+            panel2.Controls.Add(label16);
             panel2.Controls.Add(label15);
             panel2.Controls.Add(panel12);
             panel2.Controls.Add(panel11);
@@ -148,7 +146,6 @@
             panel2.Controls.Add(label7);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(label5);
-            panel2.Controls.Add(pictureBox8);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(btCancel);
             panel2.Controls.Add(btnCreateProd);
@@ -158,7 +155,6 @@
             panel2.Controls.Add(pictureBox4);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox2);
-            panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
@@ -171,6 +167,16 @@
             panel2.Size = new Size(613, 414);
             panel2.TabIndex = 9;
             panel2.Paint += panel2_Paint;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.ForeColor = Color.White;
+            label16.Location = new Point(421, 391);
+            label16.Name = "label16";
+            label16.Size = new Size(53, 15);
+            label16.TabIndex = 66;
+            label16.Text = "Cancelar";
             // 
             // label15
             // 
@@ -245,7 +251,7 @@
             // 
             panel5.BackColor = Color.White;
             panel5.ForeColor = Color.White;
-            panel5.Location = new Point(130, 219);
+            panel5.Location = new Point(128, 219);
             panel5.Name = "panel5";
             panel5.Size = new Size(104, 1);
             panel5.TabIndex = 58;
@@ -264,7 +270,7 @@
             flowLayoutPanel1.BackColor = Color.White;
             flowLayoutPanel1.Location = new Point(3, 153);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(328, 1);
+            flowLayoutPanel1.Size = new Size(335, 1);
             flowLayoutPanel1.TabIndex = 56;
             // 
             // panel3
@@ -288,7 +294,7 @@
             // 
             dtRegistro.CalendarMonthBackground = Color.FromArgb(196, 165, 237);
             dtRegistro.Format = DateTimePickerFormat.Short;
-            dtRegistro.Location = new Point(357, 129);
+            dtRegistro.Location = new Point(361, 129);
             dtRegistro.Name = "dtRegistro";
             dtRegistro.Size = new Size(115, 23);
             dtRegistro.TabIndex = 52;
@@ -297,44 +303,44 @@
             // 
             tbObservacoes.BackColor = Color.FromArgb(43, 27, 50);
             tbObservacoes.BorderStyle = BorderStyle.None;
-            tbObservacoes.Font = new Font("Segoe UI", 9.75F);
+            tbObservacoes.Font = new Font("Microsoft Sans Serif", 12F);
             tbObservacoes.ForeColor = SystemColors.Info;
             tbObservacoes.Location = new Point(39, 336);
             tbObservacoes.Name = "tbObservacoes";
-            tbObservacoes.Size = new Size(571, 18);
+            tbObservacoes.Size = new Size(571, 19);
             tbObservacoes.TabIndex = 51;
             // 
             // tbMarca
             // 
             tbMarca.BackColor = Color.FromArgb(43, 27, 50);
             tbMarca.BorderStyle = BorderStyle.None;
-            tbMarca.Font = new Font("Segoe UI", 9.75F);
+            tbMarca.Font = new Font("Microsoft Sans Serif", 12F);
             tbMarca.ForeColor = SystemColors.Info;
             tbMarca.Location = new Point(39, 264);
             tbMarca.Name = "tbMarca";
-            tbMarca.Size = new Size(150, 18);
+            tbMarca.Size = new Size(150, 19);
             tbMarca.TabIndex = 50;
             // 
             // tbCategoria
             // 
             tbCategoria.BackColor = Color.FromArgb(43, 27, 50);
             tbCategoria.BorderStyle = BorderStyle.None;
-            tbCategoria.Font = new Font("Segoe UI", 9.75F);
+            tbCategoria.Font = new Font("Microsoft Sans Serif", 12F);
             tbCategoria.ForeColor = SystemColors.Info;
             tbCategoria.Location = new Point(460, 264);
             tbCategoria.Name = "tbCategoria";
-            tbCategoria.Size = new Size(150, 18);
+            tbCategoria.Size = new Size(150, 19);
             tbCategoria.TabIndex = 49;
             // 
             // tbProvedor
             // 
             tbProvedor.BackColor = Color.FromArgb(43, 27, 50);
             tbProvedor.BorderStyle = BorderStyle.None;
-            tbProvedor.Font = new Font("Segoe UI", 9.75F);
+            tbProvedor.Font = new Font("Microsoft Sans Serif", 12F);
             tbProvedor.ForeColor = SystemColors.Info;
             tbProvedor.Location = new Point(249, 264);
             tbProvedor.Name = "tbProvedor";
-            tbProvedor.Size = new Size(150, 18);
+            tbProvedor.Size = new Size(150, 19);
             tbProvedor.TabIndex = 48;
             tbProvedor.TextChanged += textBox8_TextChanged;
             // 
@@ -342,77 +348,77 @@
             // 
             tbVolume.BackColor = Color.FromArgb(43, 27, 50);
             tbVolume.BorderStyle = BorderStyle.None;
-            tbVolume.Font = new Font("Segoe UI", 9.75F);
+            tbVolume.Font = new Font("Microsoft Sans Serif", 12F);
             tbVolume.ForeColor = SystemColors.Info;
             tbVolume.Location = new Point(545, 195);
             tbVolume.Name = "tbVolume";
-            tbVolume.Size = new Size(65, 18);
+            tbVolume.Size = new Size(65, 19);
             tbVolume.TabIndex = 47;
             // 
             // tbPreco
             // 
             tbPreco.BackColor = Color.FromArgb(43, 27, 50);
             tbPreco.BorderStyle = BorderStyle.None;
-            tbPreco.Font = new Font("Segoe UI", 9.75F);
+            tbPreco.Font = new Font("Microsoft Sans Serif", 12F);
             tbPreco.ForeColor = SystemColors.Info;
             tbPreco.Location = new Point(39, 195);
             tbPreco.Name = "tbPreco";
-            tbPreco.Size = new Size(65, 18);
+            tbPreco.Size = new Size(65, 19);
             tbPreco.TabIndex = 46;
             // 
             // tbQtd
             // 
             tbQtd.BackColor = Color.FromArgb(43, 27, 50);
             tbQtd.BorderStyle = BorderStyle.None;
-            tbQtd.Font = new Font("Segoe UI", 9.75F);
+            tbQtd.Font = new Font("Microsoft Sans Serif", 12F);
             tbQtd.ForeColor = SystemColors.Info;
             tbQtd.Location = new Point(293, 195);
             tbQtd.Name = "tbQtd";
-            tbQtd.Size = new Size(65, 18);
+            tbQtd.Size = new Size(65, 19);
             tbQtd.TabIndex = 45;
             // 
             // tbCusto
             // 
             tbCusto.BackColor = Color.FromArgb(43, 27, 50);
             tbCusto.BorderStyle = BorderStyle.None;
-            tbCusto.Font = new Font("Segoe UI", 9.75F);
+            tbCusto.Font = new Font("Microsoft Sans Serif", 12F);
             tbCusto.ForeColor = SystemColors.Info;
-            tbCusto.Location = new Point(166, 195);
+            tbCusto.Location = new Point(159, 195);
             tbCusto.Name = "tbCusto";
-            tbCusto.Size = new Size(65, 18);
+            tbCusto.Size = new Size(65, 19);
             tbCusto.TabIndex = 44;
             // 
             // tbPeso
             // 
             tbPeso.BackColor = Color.FromArgb(43, 27, 50);
             tbPeso.BorderStyle = BorderStyle.None;
-            tbPeso.Font = new Font("Segoe UI", 9.75F);
+            tbPeso.Font = new Font("Microsoft Sans Serif", 12F);
             tbPeso.ForeColor = SystemColors.Info;
             tbPeso.Location = new Point(418, 195);
             tbPeso.Name = "tbPeso";
-            tbPeso.Size = new Size(65, 18);
+            tbPeso.Size = new Size(65, 19);
             tbPeso.TabIndex = 43;
             // 
             // tbCodigoBarras
             // 
             tbCodigoBarras.BackColor = Color.FromArgb(43, 27, 50);
             tbCodigoBarras.BorderStyle = BorderStyle.None;
-            tbCodigoBarras.Font = new Font("Segoe UI", 9.75F);
+            tbCodigoBarras.Font = new Font("Microsoft Sans Serif", 12F);
             tbCodigoBarras.ForeColor = SystemColors.Info;
-            tbCodigoBarras.Location = new Point(39, 129);
+            tbCodigoBarras.Location = new Point(3, 129);
             tbCodigoBarras.Name = "tbCodigoBarras";
-            tbCodigoBarras.Size = new Size(292, 18);
+            tbCodigoBarras.Size = new Size(338, 19);
             tbCodigoBarras.TabIndex = 42;
             // 
             // tbNome
             // 
             tbNome.BackColor = Color.FromArgb(43, 27, 50);
             tbNome.BorderStyle = BorderStyle.None;
-            tbNome.Font = new Font("Segoe UI", 9.75F);
+            tbNome.Font = new Font("Microsoft Sans Serif", 12F);
             tbNome.ForeColor = SystemColors.Info;
-            tbNome.Location = new Point(39, 58);
+            tbNome.Location = new Point(3, 58);
             tbNome.Name = "tbNome";
-            tbNome.Size = new Size(571, 18);
+            tbNome.Size = new Size(607, 19);
             tbNome.TabIndex = 41;
             // 
             // pictureBox11
@@ -489,21 +495,11 @@
             // 
             label5.AutoSize = true;
             label5.ForeColor = Color.White;
-            label5.Location = new Point(357, 110);
+            label5.Location = new Point(361, 110);
             label5.Name = "label5";
             label5.Size = new Size(53, 15);
             label5.TabIndex = 32;
             label5.Text = "Registro:";
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(3, 122);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(30, 30);
-            pictureBox8.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox8.TabIndex = 31;
-            pictureBox8.TabStop = false;
             // 
             // label4
             // 
@@ -518,8 +514,8 @@
             // btCancel
             // 
             btCancel.Cursor = Cursors.Hand;
-            btCancel.FlatStyle = FlatStyle.Popup;
-            btCancel.ForeColor = Color.White;
+            btCancel.FlatStyle = FlatStyle.Flat;
+            btCancel.ForeColor = Color.FromArgb(43, 27, 50);
             btCancel.Location = new Point(395, 386);
             btCancel.Name = "btCancel";
             btCancel.Size = new Size(103, 25);
@@ -565,7 +561,7 @@
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(130, 188);
+            pictureBox5.Location = new Point(128, 188);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(30, 30);
             pictureBox5.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -586,10 +582,10 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(424, 257);
+            pictureBox3.Location = new Point(424, 264);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(30, 30);
-            pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox3.Size = new Size(20, 20);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 23;
             pictureBox3.TabStop = false;
             // 
@@ -602,17 +598,6 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox2.TabIndex = 22;
             pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(3, 51);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(30, 30);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox1.TabIndex = 21;
-            pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -630,9 +615,10 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(213, 239);
             label2.Name = "label2";
-            label2.Size = new Size(58, 15);
+            label2.Size = new Size(70, 15);
             label2.TabIndex = 19;
-            label2.Text = "Provedor:";
+            label2.Text = "Fornecedor:";
+            label2.Click += label2_Click;
             // 
             // label1
             // 
@@ -655,7 +641,7 @@
             // 
             label10.AutoSize = true;
             label10.ForeColor = Color.White;
-            label10.Location = new Point(130, 170);
+            label10.Location = new Point(128, 170);
             label10.Name = "label10";
             label10.Size = new Size(41, 15);
             label10.TabIndex = 16;
@@ -727,14 +713,12 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -753,12 +737,10 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
         private Button btnCreateProd;
         private Button btCancel;
-        private PictureBox pictureBox8;
         private Label label4;
         private Label label6;
         private Label label5;
@@ -795,5 +777,6 @@
         private Panel panel11;
         private Panel panel10;
         private Label label15;
+        private Label label16;
     }
 }
