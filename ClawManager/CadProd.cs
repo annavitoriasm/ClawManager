@@ -95,7 +95,7 @@ namespace ManageProduct
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error listing products: {ex.Message}");
+                Console.WriteLine($"Error listando produtos: {ex.Message}");
                 throw;
             }
         }
