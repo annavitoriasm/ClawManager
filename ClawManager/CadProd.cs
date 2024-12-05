@@ -43,7 +43,7 @@ namespace ManageProduct
                     Console.WriteLine($"Product added with ID: {id}");
 
 
-                    // Adiciona na lista //
+                    // Adiciona na lista 
                     var item = new ListViewItem(id.ToString());
                     item.SubItems.Add(product.Name);
                     item.SubItems.Add(product.Price.ToString("C"));
