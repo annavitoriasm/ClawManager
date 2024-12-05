@@ -71,5 +71,10 @@ namespace ClawManager
         {
             this.Close();
         }
+
+        private void ViewProduct_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
