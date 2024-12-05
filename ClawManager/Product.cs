@@ -1,6 +1,5 @@
 public class Product
 {
-    public int ID { get; private set; }
     public string? Name { get; private set; }
     public string? Description { get; private set; }
     public string? Category { get; private set; }
@@ -12,11 +11,11 @@ public class Product
     public decimal Weight { get; private set; }
     public decimal Volume { get; private set; }
     public DateOnly ExpirationDate { get; private set; }
+    public DateOnly RegisteredAt { get; private set; }
     public string? BarCode { get; private set; }
 
-    public Product(int id, string name, string description, string category, int supplierId, int qty, string brand, decimal cost, decimal price, decimal weight, decimal volume, DateOnly expirationDate, string? barcode)
+    public Product(string name, string description, string category, int supplierId, int qty, string brand, decimal cost, decimal price, decimal weight, decimal volume, DateOnly expirationDate, DateOnly registeredAt, string? barcode)
     {
-        ID = id;
         Name = name;
         Description = description;
         Category = category;
@@ -28,7 +27,7 @@ public class Product
         Weight = weight;
         Volume = volume;
         ExpirationDate = expirationDate;
-
+        RegisteredAt = registeredAt;
         BarCode = barcode;
     }
 }

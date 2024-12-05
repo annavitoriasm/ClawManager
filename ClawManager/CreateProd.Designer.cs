@@ -534,6 +534,7 @@
             btnCreateProd.TabIndex = 28;
             btnCreateProd.Text = "Criar";
             btnCreateProd.UseVisualStyleBackColor = false;
+            btnCreateProd.Click += btnCreateProd_Click_1;
             // 
             // pictureBox7
             // 

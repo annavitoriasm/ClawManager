@@ -21,7 +21,7 @@ namespace ManageProduct
                     await C.Connection.OpenAsync();
                 }
 
-                string query = "INSERT INTO \"Product\" (\"name\", \"description\", \"category\", \"supplierID\", \"qty\", \"brand\", \"costPrice\", \"sellPrice\", \"weight\", \"volume\", \"expirationDate\", \"barCode\") VALUES (@name, @description, @category, @supplierID, @qty, @brand, @costPrice, @sellPrice, @weight, @volume, @expirationDate, @barCode) RETURNING \"prodID\"";
+                string query = "INSERT INTO \"Product\" (\"name\", \"description\", \"category\", \"supplierID\", \"qty\", \"brand\", \"costPrice\", \"sellPrice\", \"weight\", \"volume\", \"expirationDate\", \"registeredAt\", \"barCode\") VALUES (@name, @description, @category, @supplierID, @qty, @brand, @costPrice, @sellPrice, @weight, @volume, @expirationDate, @registeredAt, @barCode) RETURNING \"prodID\"";
 
                 using (var cmd = new NpgsqlCommand(query, C.Connection))
                 {
@@ -35,11 +35,12 @@ namespace ManageProduct
                     cmd.Parameters.AddWithValue("@sellPrice", product.Price);
                     cmd.Parameters.AddWithValue("@weight", product.Weight);
                     cmd.Parameters.AddWithValue("@volume", product.Volume);
+                    cmd.Parameters.AddWithValue("@registeredAt", product.RegisteredAt);
                     cmd.Parameters.AddWithValue("@expirationDate", product.ExpirationDate);
                     cmd.Parameters.AddWithValue("@barCode", product.BarCode);
 
-                        var id = await cmd.ExecuteScalarAsync();
-                        Console.WriteLine($"Product added with ID: {id}");
+                    var id = await cmd.ExecuteScalarAsync();
+                    Console.WriteLine($"Product added with ID: {id}");
                 }
             }
             catch (Exception ex)
@@ -58,7 +59,7 @@ namespace ManageProduct
                     await C.Connection.OpenAsync();
                 }
 
-                string query = "SELECT \"prodID\", \"name\", \"description\", \"category\", \"supplierID\", \"qty\", \"brand\", \"costPrice\", \"sellPrice\", \"weight\", \"volume\", \"expirationDate\", \"barCode\" FROM \"Product\"";
+                string query = "SELECT \"prodID\", \"name\", \"description\", \"category\", \"supplierID\", \"qty\", \"brand\", \"costPrice\", \"sellPrice\", \"weight\", \"volume\", \"expirationDate\", \"registeredAt\", \"barCode\" FROM \"Product\"";
 
                 using (var cmd = new NpgsqlCommand(query, C.Connection))
                 {
@@ -80,13 +81,14 @@ namespace ManageProduct
                         while (await reader.ReadAsync())
                         {
                             var item = new ListViewItem(reader["prodID"].ToString());
-                            item.SubItems.Add(reader["name"]?.ToString() ?? string.Empty);
-                            item.SubItems.Add(reader["category"]?.ToString() ?? string.Empty);
-                            item.SubItems.Add(reader["qty"].ToString());
-                            item.SubItems.Add(Convert.ToDecimal(reader["sellPrice"]).ToString("C"));
-                            item.SubItems.Add(reader["brand"]?.ToString() ?? string.Empty);
-                            item.SubItems.Add(reader["supplierID"].ToString());
-                            item.SubItems.Add(reader["barCode"]?.ToString() ?? string.Empty);
+                            item.SubItems.Add(reader["name"]?.ToString() ?? "");
+                            item.SubItems.Add(reader["sellPrice"] != DBNull.Value
+                                ? Convert.ToDecimal(reader["sellPrice"]).ToString("C") : "");
+                            item.SubItems.Add(reader["qty"] != DBNull.Value
+                                ? Convert.ToInt32(reader["qty"]).ToString() : "");
+                            item.SubItems.Add(reader["brand"]?.ToString() ?? "");
+                            item.SubItems.Add(reader["supplierID"]?.ToString() ?? "");
+                            item.SubItems.Add(reader["category"]?.ToString() ?? "");
 
                             listView.Items.Add(item);
                         }

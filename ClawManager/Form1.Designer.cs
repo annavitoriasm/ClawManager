@@ -143,7 +143,7 @@
             button3.Location = new Point(1091, 94);
             button3.Name = "button3";
             button3.Size = new Size(26, 26);
-            button3.TabIndex = 16;
+            button3.TabIndex = 0;
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -412,7 +412,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximumSize = new Size(1386, 788);
-            MinimumSize = new Size(1364, 726);
+            MinimumSize = new Size(1364, 718);
             Name = "Form1";
             StartPosition = FormStartPosition.Manual;
             Text = "ClawManager - Home";
