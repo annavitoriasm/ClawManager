@@ -12,7 +12,7 @@ namespace ManageProduct
             C = new();
         }
 
-        public async Task AddProduct(Product product)
+        public async Task AddProduct(Product product, ListView listView)
         {
             try
             {
@@ -41,6 +41,19 @@ namespace ManageProduct
 
                     var id = await cmd.ExecuteScalarAsync();
                     Console.WriteLine($"Product added with ID: {id}");
+
+
+                    // Adiciona na lista //
+                    var item = new ListViewItem(id.ToString());
+                    item.SubItems.Add(product.Name);
+                    item.SubItems.Add(product.Price.ToString("C"));
+                    item.SubItems.Add(product.Qty.ToString());
+                    item.SubItems.Add(product.Brand);
+                    item.SubItems.Add(product.SupplierID.ToString());
+                    item.SubItems.Add(product.Category);
+                    item.SubItems.Add(product.BarCode);
+
+                    listView.Items.Add(item);
                 }
             }
             catch (Exception ex)
