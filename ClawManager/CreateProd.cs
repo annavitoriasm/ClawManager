@@ -14,11 +14,14 @@ namespace ClawManager
     public partial class CreateProd : Form
     {
         private readonly CadProd _addProduct;
+        private readonly ListView _listView;
+        private ListView listViewProducts;
 
-        public CreateProd()
+        public CreateProd(ListView listView)
         {
             InitializeComponent();
             _addProduct = new CadProd();
+            _listView = listView;
         }
 
         private void CreateProd_Load(object sender, EventArgs e)
@@ -91,6 +94,12 @@ namespace ClawManager
 
         }
 
+        private void btnOpenCreateProd_Click(object sender, EventArgs e)
+        {
+            var createProdForm = new CreateProd(listViewProducts);
+            createProdForm.ShowDialog();
+        }
+
         private async void btnCreateProd_Click_1(object sender, EventArgs e)
         {
             try
@@ -111,7 +120,8 @@ namespace ClawManager
                     tbCodigoBarras.Text
                 );
 
-                await _addProduct.AddProduct(produto);
+
+                await _addProduct.AddProduct(produto, _listView);
 
                 DialogResult result = MessageBox.Show("Produto adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (result == DialogResult.OK)

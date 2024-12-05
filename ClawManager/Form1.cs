@@ -79,7 +79,7 @@ namespace ClawManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var newProd = new CreateProd();
+            var newProd = new CreateProd(listViewProducts);
             newProd.ShowDialog();
         }
 
