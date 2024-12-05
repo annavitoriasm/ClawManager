@@ -76,5 +76,15 @@ namespace ClawManager
         {
 
         }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbID_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
