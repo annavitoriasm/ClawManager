@@ -162,7 +162,7 @@
             pictureBox4.Location = new Point(0, -16);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(131, 131);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 0;
             pictureBox4.TabStop = false;
             // 
@@ -172,7 +172,7 @@
             pictureBox3.Location = new Point(4, 571);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(120, 120);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
             // 
@@ -188,6 +188,8 @@
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
             panel2.Location = new Point(170, 78);
+            panel2.MaximumSize = new Size(1161, 600);
+            panel2.MinimumSize = new Size(1161, 600);
             panel2.Name = "panel2";
             panel2.Size = new Size(1161, 600);
             panel2.TabIndex = 1;
@@ -346,7 +348,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(43, 27, 50);
-            ClientSize = new Size(959, 449);
+            ClientSize = new Size(1368, 701);
             Controls.Add(pictureBox2);
             Controls.Add(button1);
             Controls.Add(panel3);
@@ -354,7 +356,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            MaximumSize = new Size(1384, 781);
+            MaximumSize = new Size(1384, 740);
             MinimizeBox = false;
             MinimumSize = new Size(960, 451);
             Name = "Form1";
