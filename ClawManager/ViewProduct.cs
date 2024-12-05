@@ -70,7 +70,7 @@ namespace ClawManager
 
         private void btnCloseView_Click(object sender, EventArgs e)
         {
-            ClearAttributes(); 
+            ClearAttributes();
             this.Close();
         }
 
@@ -88,7 +88,7 @@ namespace ClawManager
         {
         }
 
-        public void SetAttributes(string id, string nome, string preco, string qtd, 
+        public void SetAttributes(string id, string nome, string preco, string qtd,
             string marca, string forne, string categoria)
         {
             ClearAttributes();
@@ -113,6 +113,59 @@ namespace ClawManager
             lbCategoria.Text = null;
 
         }
+
+        private void panel14_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showButtons()
+        {
+            SetButtonOpacity(btnCancel, 100);
+            SetButtonOpacity(btnConfirm, 100);
+        }
+
+        public void hideButtons()
+        {
+            SetButtonOpacity(btnCancel, 0);
+            SetButtonOpacity(btnConfirm, 0);
+        }
+
+        public void SetButtonOpacity(Button button, int opacity)
+        {
+            int alpha = (int)(opacity * 2.55);
+
+            button.Paint += (sender, e) =>
+            {
+                using (var brush = new SolidBrush(Color.FromArgb(alpha, button.BackColor)))
+                {
+                    e.Graphics.FillRectangle(brush, 0, 0, button.Width, button.Height);
+                }
+            };
+
+            if (opacity == 0)
+            {
+                button.Enabled = false;
+                button.Visible = false;
+            }
+            else
+            {
+                button.Enabled = true;
+                button.Visible = true;
+            }
+        }
+
+
 
     }
 }

@@ -309,10 +309,11 @@
             // 
             textBox1.BackColor = Color.FromArgb(62, 41, 71);
             textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Segoe UI", 11F);
             textBox1.ForeColor = SystemColors.Info;
-            textBox1.Location = new Point(10, 8);
+            textBox1.Location = new Point(9, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(219, 16);
+            textBox1.Size = new Size(219, 20);
             textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -322,7 +323,7 @@
             button1.Cursor = Cursors.Hand;
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.ForeColor = SystemColors.ActiveCaptionText;
             button1.Location = new Point(1221, 24);
             button1.Margin = new Padding(0);
             button1.Name = "button1";
@@ -336,10 +337,10 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(196, 165, 237);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1233, 27);
+            pictureBox2.Location = new Point(1232, 28);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(25, 25);
-            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox2.Size = new Size(22, 22);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
             // 

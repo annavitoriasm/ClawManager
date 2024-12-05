@@ -71,6 +71,10 @@
             btnExcluir = new Button();
             label14 = new Label();
             lbID = new Label();
+            panel13 = new Panel();
+            panel14 = new Panel();
+            btnConfirm = new Button();
+            btnCancel = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -83,6 +87,8 @@
             panel10.SuspendLayout();
             panel11.SuspendLayout();
             panel12.SuspendLayout();
+            panel13.SuspendLayout();
+            panel14.SuspendLayout();
             SuspendLayout();
             // 
             // lbNome
@@ -90,7 +96,7 @@
             lbNome.AutoSize = true;
             lbNome.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
             lbNome.ForeColor = SystemColors.ButtonHighlight;
-            lbNome.Location = new Point(46, 24);
+            lbNome.Location = new Point(5, -1);
             lbNome.Name = "lbNome";
             lbNome.Size = new Size(130, 41);
             lbNome.TabIndex = 0;
@@ -244,7 +250,7 @@
             // 
             panel1.BackColor = Color.FromArgb(62, 41, 71);
             panel1.Controls.Add(lbCodigoBarras);
-            panel1.Location = new Point(46, 128);
+            panel1.Location = new Point(11, 25);
             panel1.Name = "panel1";
             panel1.Size = new Size(328, 25);
             panel1.TabIndex = 14;
@@ -253,7 +259,7 @@
             // 
             panel2.BackColor = Color.FromArgb(62, 41, 71);
             panel2.Controls.Add(lbRegistro);
-            panel2.Location = new Point(392, 128);
+            panel2.Location = new Point(357, 25);
             panel2.Name = "panel2";
             panel2.Size = new Size(108, 25);
             panel2.TabIndex = 15;
@@ -262,7 +268,7 @@
             // 
             panel3.BackColor = Color.FromArgb(62, 41, 71);
             panel3.Controls.Add(label2);
-            panel3.Location = new Point(520, 128);
+            panel3.Location = new Point(485, 25);
             panel3.Name = "panel3";
             panel3.Size = new Size(108, 25);
             panel3.TabIndex = 16;
@@ -271,7 +277,7 @@
             // 
             panel4.BackColor = Color.FromArgb(62, 41, 71);
             panel4.Controls.Add(lbCusto);
-            panel4.Location = new Point(46, 193);
+            panel4.Location = new Point(11, 90);
             panel4.Name = "panel4";
             panel4.Size = new Size(108, 25);
             panel4.TabIndex = 16;
@@ -280,7 +286,7 @@
             // 
             panel5.BackColor = Color.FromArgb(62, 41, 71);
             panel5.Controls.Add(lbPreco);
-            panel5.Location = new Point(173, 193);
+            panel5.Location = new Point(138, 90);
             panel5.Name = "panel5";
             panel5.Size = new Size(108, 25);
             panel5.TabIndex = 17;
@@ -289,7 +295,7 @@
             // 
             panel6.BackColor = Color.FromArgb(62, 41, 71);
             panel6.Controls.Add(lbEstoque);
-            panel6.Location = new Point(332, 193);
+            panel6.Location = new Point(297, 90);
             panel6.Name = "panel6";
             panel6.Size = new Size(85, 25);
             panel6.TabIndex = 18;
@@ -298,7 +304,7 @@
             // 
             panel7.BackColor = Color.FromArgb(62, 41, 71);
             panel7.Controls.Add(lbPeso);
-            panel7.Location = new Point(438, 193);
+            panel7.Location = new Point(403, 90);
             panel7.Name = "panel7";
             panel7.Size = new Size(85, 25);
             panel7.TabIndex = 18;
@@ -307,7 +313,7 @@
             // 
             panel8.BackColor = Color.FromArgb(62, 41, 71);
             panel8.Controls.Add(lbVolume);
-            panel8.Location = new Point(543, 193);
+            panel8.Location = new Point(508, 90);
             panel8.Name = "panel8";
             panel8.Size = new Size(85, 25);
             panel8.TabIndex = 19;
@@ -316,7 +322,7 @@
             // 
             panel9.BackColor = Color.FromArgb(62, 41, 71);
             panel9.Controls.Add(lbMarca);
-            panel9.Location = new Point(46, 261);
+            panel9.Location = new Point(11, 158);
             panel9.Name = "panel9";
             panel9.Size = new Size(280, 25);
             panel9.TabIndex = 15;
@@ -325,7 +331,7 @@
             // 
             panel10.BackColor = Color.FromArgb(62, 41, 71);
             panel10.Controls.Add(lbProvedor);
-            panel10.Location = new Point(348, 261);
+            panel10.Location = new Point(313, 158);
             panel10.Name = "panel10";
             panel10.Size = new Size(280, 25);
             panel10.TabIndex = 16;
@@ -334,7 +340,7 @@
             // 
             panel11.BackColor = Color.FromArgb(62, 41, 71);
             panel11.Controls.Add(lbCategoria);
-            panel11.Location = new Point(46, 329);
+            panel11.Location = new Point(11, 226);
             panel11.Name = "panel11";
             panel11.Size = new Size(582, 25);
             panel11.TabIndex = 15;
@@ -343,7 +349,7 @@
             // 
             panel12.BackColor = Color.FromArgb(62, 41, 71);
             panel12.Controls.Add(lbObservacoes);
-            panel12.Location = new Point(46, 396);
+            panel12.Location = new Point(11, 293);
             panel12.Name = "panel12";
             panel12.Size = new Size(582, 25);
             panel12.TabIndex = 16;
@@ -351,7 +357,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(48, 104);
+            label1.Location = new Point(13, 1);
             label1.Name = "label1";
             label1.Size = new Size(100, 15);
             label1.TabIndex = 20;
@@ -360,7 +366,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(392, 104);
+            label3.Location = new Point(357, 1);
             label3.Name = "label3";
             label3.Size = new Size(53, 15);
             label3.TabIndex = 21;
@@ -369,7 +375,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(520, 104);
+            label4.Location = new Point(485, 1);
             label4.Name = "label4";
             label4.Size = new Size(54, 15);
             label4.TabIndex = 22;
@@ -378,7 +384,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(46, 175);
+            label5.Location = new Point(11, 72);
             label5.Name = "label5";
             label5.Size = new Size(41, 15);
             label5.TabIndex = 23;
@@ -387,7 +393,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(173, 175);
+            label6.Location = new Point(138, 72);
             label6.Name = "label6";
             label6.Size = new Size(40, 15);
             label6.TabIndex = 24;
@@ -396,7 +402,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(332, 175);
+            label7.Location = new Point(297, 72);
             label7.Name = "label7";
             label7.Size = new Size(78, 15);
             label7.TabIndex = 25;
@@ -405,7 +411,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(438, 175);
+            label8.Location = new Point(403, 72);
             label8.Name = "label8";
             label8.Size = new Size(35, 15);
             label8.TabIndex = 26;
@@ -414,7 +420,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(543, 175);
+            label9.Location = new Point(508, 72);
             label9.Name = "label9";
             label9.Size = new Size(50, 15);
             label9.TabIndex = 27;
@@ -423,7 +429,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(46, 243);
+            label10.Location = new Point(11, 140);
             label10.Name = "label10";
             label10.Size = new Size(43, 15);
             label10.TabIndex = 28;
@@ -432,7 +438,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(348, 243);
+            label11.Location = new Point(313, 140);
             label11.Name = "label11";
             label11.Size = new Size(70, 15);
             label11.TabIndex = 29;
@@ -441,7 +447,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(46, 311);
+            label12.Location = new Point(11, 208);
             label12.Name = "label12";
             label12.Size = new Size(61, 15);
             label12.TabIndex = 30;
@@ -450,7 +456,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(46, 378);
+            label13.Location = new Point(11, 275);
             label13.Name = "label13";
             label13.Size = new Size(77, 15);
             label13.TabIndex = 31;
@@ -486,7 +492,7 @@
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 12.75F);
-            label14.Location = new Point(46, 65);
+            label14.Location = new Point(9, 40);
             label14.Name = "label14";
             label14.Size = new Size(36, 23);
             label14.TabIndex = 34;
@@ -497,7 +503,7 @@
             // 
             lbID.AutoSize = true;
             lbID.Font = new Font("Segoe UI", 12.75F);
-            lbID.Location = new Point(76, 65);
+            lbID.Location = new Point(39, 40);
             lbID.Name = "lbID";
             lbID.Size = new Size(28, 23);
             lbID.TabIndex = 35;
@@ -505,49 +511,98 @@
             lbID.TextAlign = ContentAlignment.MiddleLeft;
             lbID.Click += lbID_Click;
             // 
+            // panel13
+            // 
+            panel13.Controls.Add(label13);
+            panel13.Controls.Add(label12);
+            panel13.Controls.Add(label11);
+            panel13.Controls.Add(label10);
+            panel13.Controls.Add(label9);
+            panel13.Controls.Add(label8);
+            panel13.Controls.Add(label7);
+            panel13.Controls.Add(label6);
+            panel13.Controls.Add(label5);
+            panel13.Controls.Add(label4);
+            panel13.Controls.Add(label3);
+            panel13.Controls.Add(label1);
+            panel13.Controls.Add(panel12);
+            panel13.Controls.Add(panel11);
+            panel13.Controls.Add(panel10);
+            panel13.Controls.Add(panel9);
+            panel13.Controls.Add(panel8);
+            panel13.Controls.Add(panel7);
+            panel13.Controls.Add(panel6);
+            panel13.Controls.Add(panel5);
+            panel13.Controls.Add(panel4);
+            panel13.Controls.Add(panel3);
+            panel13.Controls.Add(panel2);
+            panel13.Controls.Add(panel1);
+            panel13.Location = new Point(35, 91);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(602, 326);
+            panel13.TabIndex = 36;
+            // 
+            // panel14
+            // 
+            panel14.Controls.Add(lbID);
+            panel14.Controls.Add(label14);
+            panel14.Controls.Add(lbNome);
+            panel14.Location = new Point(35, 19);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(482, 70);
+            panel14.TabIndex = 37;
+            panel14.Paint += panel14_Paint;
+            // 
+            // btnConfirm
+            // 
+            btnConfirm.BackColor = Color.FromArgb(196, 165, 237);
+            btnConfirm.FlatAppearance.BorderSize = 0;
+            btnConfirm.FlatStyle = FlatStyle.Flat;
+            btnConfirm.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnConfirm.ForeColor = Color.Black;
+            btnConfirm.Location = new Point(531, 426);
+            btnConfirm.Name = "btnConfirm";
+            btnConfirm.Size = new Size(106, 23);
+            btnConfirm.TabIndex = 38;
+            btnConfirm.Text = "Confirmar";
+            btnConfirm.UseVisualStyleBackColor = false;
+            btnConfirm.Click += btnConfirm_Click;
+            // 
+            // btnCancel
+            // 
+            btnCancel.BackColor = Color.Transparent;
+            btnCancel.FlatAppearance.BorderSize = 0;
+            btnCancel.FlatStyle = FlatStyle.Popup;
+            btnCancel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCancel.ForeColor = Color.WhiteSmoke;
+            btnCancel.Location = new Point(419, 425);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(106, 25);
+            btnCancel.TabIndex = 39;
+            btnCancel.Text = "Cancelar";
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
+            // 
             // ViewProduct
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(43, 27, 50);
             ClientSize = new Size(675, 467);
-            Controls.Add(lbID);
-            Controls.Add(label14);
+            Controls.Add(btnCancel);
+            Controls.Add(btnConfirm);
+            Controls.Add(panel14);
+            Controls.Add(panel13);
             Controls.Add(btnExcluir);
             Controls.Add(btnEditar);
-            Controls.Add(label13);
-            Controls.Add(label12);
-            Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label1);
-            Controls.Add(panel12);
-            Controls.Add(panel11);
-            Controls.Add(panel10);
-            Controls.Add(panel9);
-            Controls.Add(panel8);
-            Controls.Add(panel7);
-            Controls.Add(panel6);
-            Controls.Add(panel5);
-            Controls.Add(panel4);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
             Controls.Add(btnCloseView);
-            Controls.Add(lbNome);
             ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "ViewProduct";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "ViewProduct";
+            Text = "p";
             TopMost = true;
             Load += ViewProduct_Load;
             panel1.ResumeLayout(false);
@@ -574,8 +629,11 @@
             panel11.PerformLayout();
             panel12.ResumeLayout(false);
             panel12.PerformLayout();
+            panel13.ResumeLayout(false);
+            panel13.PerformLayout();
+            panel14.ResumeLayout(false);
+            panel14.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -622,5 +680,9 @@
         private Button btnExcluir;
         private Label label14;
         private Label lbID;
+        private Panel panel13;
+        private Panel panel14;
+        private Button btnConfirm;
+        private Button btnCancel;
     }
 }

@@ -1303,10 +1303,9 @@
   </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAH9JREFUOE/VkVEKgCAQRP20T4/QLYy6/5nqy2Z0BA0hiwp6MKDjzsKu5lVCCAs0
-        63oNBAdokwbZ/SDkoIyT3Q9DKRv5oAGKLAsLjVCG5/LNKpaAMUFcVi8r5BWPDbzMXuoGBMb9EVqoMPOH
-        bzyCEHfCZVHnM7dAkL9Tb/tZjNkBplw2zWtQJ5cAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABHSURBVDhPYxg2YBIQT4QwqQOuQDHVwKiBlAOyDJwBxGdw
+        4G9QjE0OhEF6MQAlBk4HYpLA4AhDfGDUQMrBTCDGmtaGGmBgAAAUrS+MCI0lOwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
