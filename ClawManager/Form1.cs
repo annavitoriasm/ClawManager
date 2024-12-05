@@ -19,19 +19,40 @@ namespace ClawManager
             listViewProducts = new ListView
             {
                 Dock = DockStyle.None,
-                Width = 1000,
+                Width = 1080,
                 Height = 530,
                 FullRowSelect = true,
-                GridLines = true,
-                View = View.Details
+                GridLines = false,
+                View = View.Details,
+                BackColor = Color.FromArgb(62, 41, 71),
+                ForeColor = Color.White,
+                Font = new Font("Segoe UI", 12, FontStyle.Regular),
+                HeaderStyle = ColumnHeaderStyle.None,
+                BorderStyle = BorderStyle.None,
             };
 
             this.Controls.Add(listViewProducts);
             this.Controls.SetChildIndex(listViewProducts, 1);
             this.BackColor = Color.FromArgb(62, 41, 71);
-            listViewProducts.Location = new Point(205, 141);
+            listViewProducts.Location = new Point(223, 141);
+            ApplyAlternatingRowColors();
         }
 
+
+        private void ApplyAlternatingRowColors()
+        {
+            for (int i = 0; i < listViewProducts.Items.Count; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    listViewProducts.Items[i].BackColor = Color.FromArgb(62, 41, 71);
+                }
+                else
+                {
+                    listViewProducts.Items[i].BackColor = Color.FromArgb(80, 60, 100);  
+                }
+            }
+        }
 
         private async Task LoadProductsAsync()
         {

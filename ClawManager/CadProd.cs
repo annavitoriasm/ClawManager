@@ -67,14 +67,15 @@ namespace ManageProduct
                     {
                         listView.View = View.Details;
                         listView.Columns.Clear();
-                        listView.Columns.Add("ID");
-                        listView.Columns.Add("Nome");
-                        listView.Columns.Add("Categoria");
-                        listView.Columns.Add("Quantidade");
-                        listView.Columns.Add("Preço");
-                        listView.Columns.Add("Marca");
-                        listView.Columns.Add("Fornecedor");
-                        listView.Columns.Add("Código de Barras");
+                        listView.Columns.Add("ID",73);
+                        listView.Columns.Add("Nome",237);
+                        listView.Columns.Add("Preço", 120);
+                        listView.Columns.Add("Quantidade", 100);
+                        listView.Columns.Add("Marca", 175);
+                        listView.Columns.Add("Fornecedor", 175);
+                        listView.Columns.Add("Categoria",180);
+                        listView.Columns.Add("Código de Barras",0);
+                        listView.TileSize = new Size(1, 50);
 
                         listView.Items.Clear();
 
@@ -100,6 +101,8 @@ namespace ManageProduct
                 Console.WriteLine($"Error listando produtos: {ex.Message}");
                 throw;
             }
+
         }
+     
     }
 }

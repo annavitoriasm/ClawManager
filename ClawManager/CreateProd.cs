@@ -91,23 +91,6 @@ namespace ClawManager
 
         }
 
-        private void ClearFields()
-        {
-            tbNome.Clear();
-            tbObservacoes.Clear();
-            tbCategoria.Clear();
-            tbProvedor.Clear();
-            tbQtd.Clear();
-            tbMarca.Clear();
-            tbCusto.Clear();
-            tbPreco.Clear();
-            tbPeso.Clear();
-            tbVolume.Clear();
-            tbCodigoBarras.Clear();
-            dtRegistro.Value = DateTime.Now;
-            dtValidade.Value = DateTime.Now;
-        }
-
         private async void btnCreateProd_Click_1(object sender, EventArgs e)
         {
             try
@@ -130,8 +113,13 @@ namespace ClawManager
 
                 await _addProduct.AddProduct(produto);
 
-                MessageBox.Show("Produto adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearFields();
+                DialogResult result = MessageBox.Show("Produto adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (result == DialogResult.OK)
+                {
+                    ClearFields();
+                    this.Close();
+                }
+                
             }
             catch (FormatException)
             {
@@ -142,5 +130,23 @@ namespace ClawManager
                 MessageBox.Show($"Ocorreu um erro ao adicionar o produto: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void ClearFields()
+        {
+            tbNome.Clear();
+            tbObservacoes.Clear();
+            tbCategoria.Clear();
+            tbProvedor.Clear();
+            tbQtd.Clear();
+            tbMarca.Clear();
+            tbCusto.Clear();
+            tbPreco.Clear();
+            tbPeso.Clear();
+            tbVolume.Clear();
+            tbCodigoBarras.Clear();
+            dtRegistro.Value = DateTime.Now;
+            dtValidade.Value = DateTime.Now;
+        }
+
     }
 }

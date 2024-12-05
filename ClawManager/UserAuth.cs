@@ -13,9 +13,12 @@ namespace ManageUser
         }
         public User? Authenticate(string username, string password)
         {
-            using (C.Connection)
+            using (var connection = new NpgsqlConnection(C.Connection.ConnectionString))
             {
-                C.Connection.Open();
+                if (C.Connection.State != System.Data.ConnectionState.Open)
+                {
+                    C.Connection.Open();
+                }
 
                 string query = "SELECT \"id\", \"username\", \"password\" FROM \"User\" WHERE \"username\" = @Username";
                 using (var cmd = new NpgsqlCommand(query, C.Connection))
