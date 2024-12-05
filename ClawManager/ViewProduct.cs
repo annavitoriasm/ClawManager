@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -69,6 +70,7 @@ namespace ClawManager
 
         private void btnCloseView_Click(object sender, EventArgs e)
         {
+            ClearAttributes(); 
             this.Close();
         }
 
@@ -84,7 +86,33 @@ namespace ClawManager
 
         private void lbID_Click(object sender, EventArgs e)
         {
+        }
+
+        public void SetAttributes(string id, string nome, string preco, string qtd, 
+            string marca, string forne, string categoria)
+        {
+            ClearAttributes();
+            lbID.Text = id;
+            lbNome.Text = nome;
+            lbPreco.Text = preco;
+            lbEstoque.Text = qtd;
+            lbMarca.Text = marca;
+            lbProvedor.Text = forne;
+            lbCategoria.Text = categoria;
 
         }
+
+        public void ClearAttributes()
+        {
+            lbID.Text = null;
+            lbNome.Text = null;
+            lbPreco.Text = null;
+            lbEstoque.Text = null;
+            lbMarca.Text = null;
+            lbProvedor.Text = null;
+            lbCategoria.Text = null;
+
+        }
+
     }
 }

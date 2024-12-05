@@ -34,6 +34,24 @@ namespace ClawManager
             panel2.Controls.Add(listViewProducts);  // Adiciona o ListView ao painel2
             panel2.Controls.SetChildIndex(listViewProducts, 1);
             CenterListView();
+
+            listViewProducts.Click += (sender, e) =>
+            {
+                if (listViewProducts.SelectedItems.Count > 0)
+                {
+                    var selectedItem = listViewProducts.SelectedItems[0]; //ID
+                    var nome = selectedItem.SubItems[1].Text;
+                    var preco = selectedItem.SubItems[2].Text;
+                    var qtd = selectedItem.SubItems[3].Text;
+                    var marca = selectedItem.SubItems[4].Text;
+                    var forne = selectedItem.SubItems[5].Text;
+                    var categoria = selectedItem.SubItems[6].Text;
+                    var viewProd = new ViewProduct();
+                    viewProd.SetAttributes(selectedItem.Text, nome, preco, qtd, marca, forne, categoria);
+                    viewProd.ShowDialog();
+                }
+            };
+
         }
 
         private void CenterListView()

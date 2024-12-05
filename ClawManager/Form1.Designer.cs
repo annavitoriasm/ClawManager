@@ -169,9 +169,9 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(4, 571);
+            pictureBox3.Location = new Point(14, 588);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(120, 120);
+            pictureBox3.Size = new Size(100, 100);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
@@ -357,7 +357,6 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(1384, 740);
-            MinimizeBox = false;
             MinimumSize = new Size(960, 451);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
