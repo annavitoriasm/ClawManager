@@ -59,26 +59,29 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(txtLogin);
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(12, 12);
+            panel1.Location = new Point(17, 20);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(291, 409);
+            panel1.Size = new Size(416, 682);
             panel1.TabIndex = 0;
             // 
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Location = new Point(34, 259);
+            panel2.Location = new Point(49, 432);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(226, 1);
+            panel2.Size = new Size(323, 2);
             panel2.TabIndex = 14;
             // 
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(31, 222);
+            pictureBox3.Location = new Point(44, 370);
+            pictureBox3.Margin = new Padding(4, 5, 4, 5);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(38, 38);
+            pictureBox3.Size = new Size(54, 63);
             pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox3.TabIndex = 13;
             pictureBox3.TabStop = false;
@@ -89,27 +92,30 @@
             txtPass.BorderStyle = BorderStyle.None;
             txtPass.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPass.ForeColor = SystemColors.Window;
-            txtPass.Location = new Point(73, 232);
+            txtPass.Location = new Point(104, 387);
+            txtPass.Margin = new Padding(4, 5, 4, 5);
             txtPass.Name = "txtPass";
-            txtPass.Size = new Size(183, 20);
+            txtPass.Size = new Size(261, 30);
             txtPass.TabIndex = 12;
             txtPass.UseSystemPasswordChar = true;
             // 
             // panel3
             // 
             panel3.BackColor = Color.White;
-            panel3.Location = new Point(32, 202);
+            panel3.Location = new Point(46, 337);
+            panel3.Margin = new Padding(4, 5, 4, 5);
             panel3.Name = "panel3";
-            panel3.Size = new Size(226, 1);
+            panel3.Size = new Size(323, 2);
             panel3.TabIndex = 11;
             // 
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(34, 168);
+            pictureBox2.Location = new Point(49, 280);
+            pictureBox2.Margin = new Padding(4, 5, 4, 5);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(35, 35);
+            pictureBox2.Size = new Size(50, 58);
             pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox2.TabIndex = 10;
             pictureBox2.TabStop = false;
@@ -119,9 +125,10 @@
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             radioButton1.ForeColor = SystemColors.ControlLightLight;
-            radioButton1.Location = new Point(34, 275);
+            radioButton1.Location = new Point(49, 458);
+            radioButton1.Margin = new Padding(4, 5, 4, 5);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(90, 19);
+            radioButton1.Size = new Size(138, 29);
             radioButton1.TabIndex = 7;
             radioButton1.TabStop = true;
             radioButton1.Text = "Lembrar-me";
@@ -133,9 +140,10 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button2.ForeColor = SystemColors.ControlLightLight;
-            button2.Location = new Point(101, 357);
+            button2.Location = new Point(144, 595);
+            button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
-            button2.Size = new Size(90, 30);
+            button2.Size = new Size(129, 50);
             button2.TabIndex = 6;
             button2.Text = "Cancelar";
             button2.UseVisualStyleBackColor = false;
@@ -147,9 +155,10 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(34, 318);
+            button1.Location = new Point(49, 530);
+            button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Size = new Size(226, 30);
+            button1.Size = new Size(323, 50);
             button1.TabIndex = 5;
             button1.Text = "Entrar";
             button1.UseVisualStyleBackColor = false;
@@ -161,34 +170,38 @@
             txtLogin.BorderStyle = BorderStyle.None;
             txtLogin.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtLogin.ForeColor = SystemColors.Window;
-            txtLogin.Location = new Point(73, 176);
+            txtLogin.Location = new Point(104, 293);
+            txtLogin.Margin = new Padding(4, 5, 4, 5);
             txtLogin.Name = "txtLogin";
-            txtLogin.Size = new Size(183, 20);
+            txtLogin.Size = new Size(261, 30);
             txtLogin.TabIndex = 4;
             txtLogin.TextChanged += textBox2_TextChanged;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(82, 19);
+            pictureBox1.Location = new Point(117, 32);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(125, 125);
+            pictureBox1.Size = new Size(179, 208);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(43, 27, 50);
-            ClientSize = new Size(315, 433);
+            ClientSize = new Size(441, 693);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
-            MaximumSize = new Size(331, 472);
+            MaximumSize = new Size(463, 749);
             MinimizeBox = false;
-            MinimumSize = new Size(331, 472);
+            MinimumSize = new Size(463, 749);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ClawManager - Login";
