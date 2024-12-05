@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
+            pictureBox7 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            btnFornecedor = new Button();
+            btnProdutos = new Button();
+            btnDashboar = new Button();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             panel2 = new Panel();
@@ -46,8 +52,10 @@
             textBox1 = new TextBox();
             button1 = new Button();
             pictureBox2 = new PictureBox();
-            button2 = new Button();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel2.SuspendLayout();
@@ -59,22 +67,101 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(22, 13, 26);
+            panel1.Controls.Add(pictureBox7);
+            panel1.Controls.Add(pictureBox6);
+            panel1.Controls.Add(pictureBox5);
+            panel1.Controls.Add(btnFornecedor);
+            panel1.Controls.Add(btnProdutos);
+            panel1.Controls.Add(btnDashboar);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(pictureBox3);
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(187, 1250);
+            panel1.Size = new Size(131, 750);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(4, 219);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(30, 30);
+            pictureBox7.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox7.TabIndex = 12;
+            pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(7, 165);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(30, 30);
+            pictureBox6.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox6.TabIndex = 11;
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(7, 111);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(30, 30);
+            pictureBox5.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox5.TabIndex = 8;
+            pictureBox5.TabStop = false;
+            // 
+            // btnFornecedor
+            // 
+            btnFornecedor.FlatAppearance.BorderColor = Color.FromArgb(62, 41, 71);
+            btnFornecedor.FlatAppearance.BorderSize = 2;
+            btnFornecedor.FlatStyle = FlatStyle.Flat;
+            btnFornecedor.ForeColor = Color.White;
+            btnFornecedor.Location = new Point(-9, 206);
+            btnFornecedor.Name = "btnFornecedor";
+            btnFornecedor.Padding = new Padding(45, 0, 0, 0);
+            btnFornecedor.Size = new Size(148, 55);
+            btnFornecedor.TabIndex = 10;
+            btnFornecedor.Text = "Fornecedores";
+            btnFornecedor.TextAlign = ContentAlignment.MiddleLeft;
+            btnFornecedor.UseVisualStyleBackColor = true;
+            // 
+            // btnProdutos
+            // 
+            btnProdutos.FlatAppearance.BorderColor = Color.FromArgb(62, 41, 71);
+            btnProdutos.FlatAppearance.BorderSize = 2;
+            btnProdutos.FlatStyle = FlatStyle.Flat;
+            btnProdutos.ForeColor = Color.White;
+            btnProdutos.Location = new Point(-9, 152);
+            btnProdutos.Name = "btnProdutos";
+            btnProdutos.Padding = new Padding(45, 0, 0, 0);
+            btnProdutos.Size = new Size(148, 55);
+            btnProdutos.TabIndex = 9;
+            btnProdutos.Text = "Produtos";
+            btnProdutos.TextAlign = ContentAlignment.MiddleLeft;
+            btnProdutos.UseVisualStyleBackColor = true;
+            // 
+            // btnDashboar
+            // 
+            btnDashboar.FlatAppearance.BorderColor = Color.FromArgb(62, 41, 71);
+            btnDashboar.FlatAppearance.BorderSize = 2;
+            btnDashboar.FlatStyle = FlatStyle.Flat;
+            btnDashboar.ForeColor = Color.White;
+            btnDashboar.Location = new Point(-9, 98);
+            btnDashboar.Name = "btnDashboar";
+            btnDashboar.Padding = new Padding(45, 0, 0, 0);
+            btnDashboar.Size = new Size(148, 55);
+            btnDashboar.TabIndex = 8;
+            btnDashboar.Text = "Dashboard";
+            btnDashboar.TextAlign = ContentAlignment.MiddleLeft;
+            btnDashboar.UseVisualStyleBackColor = true;
             // 
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(0, -27);
-            pictureBox4.Margin = new Padding(4, 5, 4, 5);
+            pictureBox4.Location = new Point(0, -16);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(187, 218);
+            pictureBox4.Size = new Size(131, 131);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 0;
             pictureBox4.TabStop = false;
@@ -82,10 +169,9 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(6, 952);
-            pictureBox3.Margin = new Padding(4, 5, 4, 5);
+            pictureBox3.Location = new Point(4, 571);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(171, 200);
+            pictureBox3.Size = new Size(120, 120);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
@@ -101,20 +187,18 @@
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
-            panel2.Location = new Point(243, 130);
-            panel2.Margin = new Padding(4, 5, 4, 5);
+            panel2.Location = new Point(170, 78);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1659, 1000);
+            panel2.Size = new Size(1161, 600);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
             // panel4
             // 
             panel4.BackColor = Color.Silver;
-            panel4.Location = new Point(50, 97);
-            panel4.Margin = new Padding(4, 5, 4, 5);
+            panel4.Location = new Point(38, 47);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1541, 2);
+            panel4.Size = new Size(1079, 1);
             panel4.TabIndex = 7;
             // 
             // label7
@@ -122,10 +206,9 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(1333, 42);
-            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Location = new Point(920, 17);
             label7.Name = "label7";
-            label7.Size = new Size(109, 30);
+            label7.Size = new Size(75, 20);
             label7.TabIndex = 6;
             label7.Text = "Categoria";
             // 
@@ -134,10 +217,9 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(1083, 42);
-            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Location = new Point(745, 17);
             label6.Name = "label6";
-            label6.Size = new Size(104, 30);
+            label6.Size = new Size(73, 20);
             label6.TabIndex = 5;
             label6.Text = "Provedor";
             // 
@@ -146,10 +228,9 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(836, 42);
-            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Location = new Point(572, 17);
             label5.Name = "label5";
-            label5.Size = new Size(73, 30);
+            label5.Size = new Size(52, 20);
             label5.TabIndex = 4;
             label5.Text = "Marca";
             // 
@@ -158,10 +239,9 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(693, 42);
-            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Location = new Point(472, 17);
             label4.Name = "label4";
-            label4.Size = new Size(56, 30);
+            label4.Size = new Size(38, 20);
             label4.TabIndex = 3;
             label4.Text = "Qtd.";
             // 
@@ -170,10 +250,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(520, 42);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(351, 17);
             label3.Name = "label3";
-            label3.Size = new Size(69, 30);
+            label3.Size = new Size(48, 20);
             label3.TabIndex = 2;
             label3.Text = "Preço";
             // 
@@ -182,10 +261,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(190, 42);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(115, 17);
             label2.Name = "label2";
-            label2.Size = new Size(74, 30);
+            label2.Size = new Size(51, 20);
             label2.TabIndex = 1;
             label2.Text = "Nome";
             label2.Click += label2_Click;
@@ -195,10 +273,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(83, 42);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(44, 17);
             label1.Name = "label1";
-            label1.Size = new Size(35, 30);
+            label1.Size = new Size(24, 20);
             label1.TabIndex = 0;
             label1.Text = "ID";
             label1.Click += label1_Click;
@@ -209,10 +286,9 @@
             panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(pictureBox1);
             panel3.Controls.Add(textBox1);
-            panel3.Location = new Point(243, 40);
-            panel3.Margin = new Padding(4, 5, 4, 5);
+            panel3.Location = new Point(170, 24);
             panel3.Name = "panel3";
-            panel3.Size = new Size(381, 49);
+            panel3.Size = new Size(267, 30);
             panel3.TabIndex = 2;
             panel3.Paint += panel3_Paint;
             // 
@@ -220,10 +296,9 @@
             // 
             pictureBox1.BackColor = Color.FromArgb(196, 165, 237);
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(337, 0);
-            pictureBox1.Margin = new Padding(4, 5, 4, 5);
+            pictureBox1.Location = new Point(236, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(43, 50);
+            pictureBox1.Size = new Size(30, 30);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -233,10 +308,9 @@
             textBox1.BackColor = Color.FromArgb(62, 41, 71);
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.ForeColor = SystemColors.Info;
-            textBox1.Location = new Point(14, 13);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
+            textBox1.Location = new Point(10, 8);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(313, 24);
+            textBox1.Size = new Size(219, 16);
             textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -247,10 +321,10 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(1744, 40);
+            button1.Location = new Point(1221, 24);
             button1.Margin = new Padding(0);
             button1.Name = "button1";
-            button1.Size = new Size(157, 50);
+            button1.Size = new Size(110, 30);
             button1.TabIndex = 3;
             button1.Text = "Novo";
             button1.UseVisualStyleBackColor = false;
@@ -260,36 +334,19 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(196, 165, 237);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1761, 45);
-            pictureBox2.Margin = new Padding(4, 5, 4, 5);
+            pictureBox2.Location = new Point(1233, 27);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(36, 42);
+            pictureBox2.Size = new Size(25, 25);
             pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(196, 165, 237);
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Center;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.FromArgb(196, 165, 237);
-            button2.Location = new Point(639, 40);
-            button2.Margin = new Padding(4, 5, 4, 5);
-            button2.Name = "button2";
-            button2.Size = new Size(43, 50);
-            button2.TabIndex = 1;
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click_1;
-            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(43, 27, 50);
-            ClientSize = new Size(1949, 1160);
-            Controls.Add(button2);
+            ClientSize = new Size(959, 449);
             Controls.Add(pictureBox2);
             Controls.Add(button1);
             Controls.Add(panel3);
@@ -297,14 +354,17 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 5, 4, 5);
-            MaximumSize = new Size(1971, 1276);
-            MinimumSize = new Size(1939, 1159);
+            MaximumSize = new Size(1384, 781);
+            MinimizeBox = false;
+            MinimumSize = new Size(960, 451);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ClawManager - Home";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel2.ResumeLayout(false);
@@ -336,5 +396,11 @@
         private Panel panel4;
         private Label label7;
         private Label label6;
+        private Button btnFornecedor;
+        private Button btnProdutos;
+        private Button btnDashboar;
+        private PictureBox pictureBox7;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox5;
     }
 }

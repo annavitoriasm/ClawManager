@@ -31,27 +31,16 @@ namespace ClawManager
                 BorderStyle = BorderStyle.None,
             };
 
-            this.Controls.Add(listViewProducts);
-            this.Controls.SetChildIndex(listViewProducts, 1);
-            this.BackColor = Color.FromArgb(62, 41, 71);
-            listViewProducts.Location = new Point(223, 141);
-            ApplyAlternatingRowColors();
+            panel2.Controls.Add(listViewProducts);  // Adiciona o ListView ao painel2
+            panel2.Controls.SetChildIndex(listViewProducts, 1);
+            CenterListView();
         }
 
-
-        private void ApplyAlternatingRowColors()
+        private void CenterListView()
         {
-            for (int i = 0; i < listViewProducts.Items.Count; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    listViewProducts.Items[i].BackColor = Color.FromArgb(62, 41, 71);
-                }
-                else
-                {
-                    listViewProducts.Items[i].BackColor = Color.FromArgb(80, 60, 100);  
-                }
-            }
+            listViewProducts.Location = new Point(
+            (panel2.Width - listViewProducts.Width) / 2,
+            panel2.Height - listViewProducts.Height - 15);
         }
 
         private async Task LoadProductsAsync()
@@ -85,7 +74,7 @@ namespace ClawManager
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
