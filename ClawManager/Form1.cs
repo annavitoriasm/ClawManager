@@ -208,8 +208,9 @@ namespace ClawManager
         private void btnDashboar_Click(object sender, EventArgs e)
         {
             Dashboard dashboard = new Dashboard();
-            dashboard.ShowDialog();
             this.Hide();
+            dashboard.ShowDialog();
+            this.Close();
         }
     }
 }
