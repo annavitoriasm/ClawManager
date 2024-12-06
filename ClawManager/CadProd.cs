@@ -125,8 +125,14 @@ namespace ManageProduct
                                  ? Convert.ToDecimal(reader["weight"]).ToString("") : "");
                             item.SubItems.Add(reader["volume"] != DBNull.Value
                                  ? Convert.ToDecimal(reader["volume"]).ToString("") : "");
-                            item.SubItems.Add(reader["registeredAt"]?.ToString() ?? "");
-                            item.SubItems.Add(reader["expirationDate"]?.ToString() ?? "");
+                            string registeredAt = reader["registeredAt"] != DBNull.Value
+                            ? DateOnly.FromDateTime((DateTime)reader["registeredAt"]).ToString("dd/MM/yyyy")
+                            : "";
+                            item.SubItems.Add(registeredAt);
+                            string expirationDate = reader["expirationDate"] != DBNull.Value
+                            ? DateOnly.FromDateTime((DateTime)reader["expirationDate"]).ToString("dd/MM/yyyy")
+                            : "";
+                            item.SubItems.Add(expirationDate);
 
 
                             listView.Items.Add(item);
