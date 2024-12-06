@@ -474,6 +474,7 @@
             btnEditar.Size = new Size(40, 40);
             btnEditar.TabIndex = 32;
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnExcluir
             // 
@@ -487,6 +488,7 @@
             btnExcluir.Size = new Size(40, 40);
             btnExcluir.TabIndex = 33;
             btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // label14
             // 

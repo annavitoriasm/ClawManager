@@ -114,8 +114,31 @@ namespace ManageProduct
                 Console.WriteLine($"Error listando produtos: {ex.Message}");
                 throw;
             }
-
         }
-     
+
+        public async Task delProd(int prodID)
+        {
+            try
+            {
+                if (C.Connection.State != System.Data.ConnectionState.Open)
+                {
+                    await C.Connection.OpenAsync();
+                }
+
+                string query = "DELETE FROM \"Product\" WHERE \"prodID\" = @prodID";
+
+                using (var cmd = new NpgsqlCommand(query, C.Connection))
+                {
+                    cmd.Parameters.AddWithValue("@prodID", prodID);
+
+                    await cmd.ExecuteNonQueryAsync();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao excluir o produto: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
