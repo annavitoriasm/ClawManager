@@ -48,7 +48,7 @@ namespace ClawManager
                     var categoria = selectedItem.SubItems[6].Text;
                     var viewProd = new ViewProduct();
                     viewProd.SetAttributes(selectedItem.Text, nome, preco, qtd, marca, forne, categoria);
-                    viewProd.hideButtons();
+                    viewProd.hideEdit();
                     viewProd.ShowDialog();
                 }
             };

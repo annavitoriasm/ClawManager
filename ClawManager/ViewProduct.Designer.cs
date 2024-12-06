@@ -48,12 +48,17 @@
             panel3 = new Panel();
             panel4 = new Panel();
             panel5 = new Panel();
+            tbPreco = new TextBox();
             panel6 = new Panel();
+            tbEstoque = new TextBox();
             panel7 = new Panel();
             panel8 = new Panel();
             panel9 = new Panel();
+            tbMarca = new TextBox();
             panel10 = new Panel();
+            tbProvedor = new TextBox();
             panel11 = new Panel();
+            tbCategoria = new TextBox();
             panel12 = new Panel();
             label1 = new Label();
             label3 = new Label();
@@ -73,8 +78,10 @@
             lbID = new Label();
             panel13 = new Panel();
             panel14 = new Panel();
+            tbNome = new TextBox();
             btnConfirm = new Button();
             btnCancel = new Button();
+            btnHoverEditar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -174,6 +181,7 @@
             // lbEstoque
             // 
             lbEstoque.AutoSize = true;
+            lbEstoque.BackColor = Color.FromArgb(62, 41, 71);
             lbEstoque.Font = new Font("Segoe UI", 12F);
             lbEstoque.Location = new Point(3, 1);
             lbEstoque.Name = "lbEstoque";
@@ -285,20 +293,44 @@
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(62, 41, 71);
+            panel5.Controls.Add(tbPreco);
             panel5.Controls.Add(lbPreco);
             panel5.Location = new Point(138, 90);
             panel5.Name = "panel5";
             panel5.Size = new Size(108, 25);
             panel5.TabIndex = 17;
             // 
+            // tbPreco
+            // 
+            tbPreco.BackColor = Color.FromArgb(62, 41, 71);
+            tbPreco.BorderStyle = BorderStyle.None;
+            tbPreco.Font = new Font("Segoe UI", 12F);
+            tbPreco.ForeColor = Color.White;
+            tbPreco.Location = new Point(7, 1);
+            tbPreco.Name = "tbPreco";
+            tbPreco.Size = new Size(99, 22);
+            tbPreco.TabIndex = 37;
+            // 
             // panel6
             // 
             panel6.BackColor = Color.FromArgb(62, 41, 71);
+            panel6.Controls.Add(tbEstoque);
             panel6.Controls.Add(lbEstoque);
             panel6.Location = new Point(297, 90);
             panel6.Name = "panel6";
             panel6.Size = new Size(85, 25);
             panel6.TabIndex = 18;
+            // 
+            // tbEstoque
+            // 
+            tbEstoque.BackColor = Color.FromArgb(62, 41, 71);
+            tbEstoque.BorderStyle = BorderStyle.None;
+            tbEstoque.Font = new Font("Segoe UI", 12F);
+            tbEstoque.ForeColor = Color.White;
+            tbEstoque.Location = new Point(7, 1);
+            tbEstoque.Name = "tbEstoque";
+            tbEstoque.Size = new Size(78, 22);
+            tbEstoque.TabIndex = 38;
             // 
             // panel7
             // 
@@ -321,29 +353,65 @@
             // panel9
             // 
             panel9.BackColor = Color.FromArgb(62, 41, 71);
+            panel9.Controls.Add(tbMarca);
             panel9.Controls.Add(lbMarca);
             panel9.Location = new Point(11, 158);
             panel9.Name = "panel9";
             panel9.Size = new Size(280, 25);
             panel9.TabIndex = 15;
             // 
+            // tbMarca
+            // 
+            tbMarca.BackColor = Color.FromArgb(62, 41, 71);
+            tbMarca.BorderStyle = BorderStyle.None;
+            tbMarca.Font = new Font("Segoe UI", 12F);
+            tbMarca.ForeColor = Color.White;
+            tbMarca.Location = new Point(7, 1);
+            tbMarca.Name = "tbMarca";
+            tbMarca.Size = new Size(272, 22);
+            tbMarca.TabIndex = 39;
+            // 
             // panel10
             // 
             panel10.BackColor = Color.FromArgb(62, 41, 71);
+            panel10.Controls.Add(tbProvedor);
             panel10.Controls.Add(lbProvedor);
             panel10.Location = new Point(313, 158);
             panel10.Name = "panel10";
             panel10.Size = new Size(280, 25);
             panel10.TabIndex = 16;
             // 
+            // tbProvedor
+            // 
+            tbProvedor.BackColor = Color.FromArgb(62, 41, 71);
+            tbProvedor.BorderStyle = BorderStyle.None;
+            tbProvedor.Font = new Font("Segoe UI", 12F);
+            tbProvedor.ForeColor = Color.White;
+            tbProvedor.Location = new Point(7, 1);
+            tbProvedor.Name = "tbProvedor";
+            tbProvedor.Size = new Size(272, 22);
+            tbProvedor.TabIndex = 40;
+            // 
             // panel11
             // 
             panel11.BackColor = Color.FromArgb(62, 41, 71);
+            panel11.Controls.Add(tbCategoria);
             panel11.Controls.Add(lbCategoria);
             panel11.Location = new Point(11, 226);
             panel11.Name = "panel11";
             panel11.Size = new Size(582, 25);
             panel11.TabIndex = 15;
+            // 
+            // tbCategoria
+            // 
+            tbCategoria.BackColor = Color.FromArgb(62, 41, 71);
+            tbCategoria.BorderStyle = BorderStyle.None;
+            tbCategoria.Font = new Font("Segoe UI", 12F);
+            tbCategoria.ForeColor = Color.White;
+            tbCategoria.Location = new Point(7, 1);
+            tbCategoria.Name = "tbCategoria";
+            tbCategoria.Size = new Size(574, 22);
+            tbCategoria.TabIndex = 41;
             // 
             // panel12
             // 
@@ -465,7 +533,7 @@
             // btnEditar
             // 
             btnEditar.Cursor = Cursors.Hand;
-            btnEditar.FlatAppearance.BorderSize = 2;
+            btnEditar.FlatAppearance.BorderSize = 0;
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.ForeColor = Color.FromArgb(43, 27, 50);
             btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
@@ -479,7 +547,7 @@
             // btnExcluir
             // 
             btnExcluir.Cursor = Cursors.Hand;
-            btnExcluir.FlatAppearance.BorderSize = 2;
+            btnExcluir.FlatAppearance.BorderSize = 0;
             btnExcluir.FlatStyle = FlatStyle.Flat;
             btnExcluir.ForeColor = Color.FromArgb(43, 27, 50);
             btnExcluir.Image = (Image)resources.GetObject("btnExcluir.Image");
@@ -546,6 +614,7 @@
             // 
             // panel14
             // 
+            panel14.Controls.Add(tbNome);
             panel14.Controls.Add(lbID);
             panel14.Controls.Add(label14);
             panel14.Controls.Add(lbNome);
@@ -554,6 +623,17 @@
             panel14.Size = new Size(482, 70);
             panel14.TabIndex = 37;
             panel14.Paint += panel14_Paint;
+            // 
+            // tbNome
+            // 
+            tbNome.BackColor = Color.FromArgb(62, 41, 71);
+            tbNome.BorderStyle = BorderStyle.None;
+            tbNome.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
+            tbNome.ForeColor = Color.White;
+            tbNome.Location = new Point(12, 0);
+            tbNome.Name = "tbNome";
+            tbNome.Size = new Size(470, 40);
+            tbNome.TabIndex = 36;
             // 
             // btnConfirm
             // 
@@ -585,12 +665,27 @@
             btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 
+            // btnHoverEditar
+            // 
+            btnHoverEditar.BackColor = Color.White;
+            btnHoverEditar.Cursor = Cursors.Hand;
+            btnHoverEditar.FlatAppearance.BorderSize = 0;
+            btnHoverEditar.FlatStyle = FlatStyle.Flat;
+            btnHoverEditar.ForeColor = Color.White;
+            btnHoverEditar.Image = (Image)resources.GetObject("btnHoverEditar.Image");
+            btnHoverEditar.Location = new Point(588, 25);
+            btnHoverEditar.Name = "btnHoverEditar";
+            btnHoverEditar.Size = new Size(40, 40);
+            btnHoverEditar.TabIndex = 40;
+            btnHoverEditar.UseVisualStyleBackColor = false;
+            // 
             // ViewProduct
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(43, 27, 50);
             ClientSize = new Size(675, 467);
+            Controls.Add(btnHoverEditar);
             Controls.Add(btnCancel);
             Controls.Add(btnConfirm);
             Controls.Add(panel14);
@@ -686,5 +781,12 @@
         private Panel panel14;
         private Button btnConfirm;
         private Button btnCancel;
+        private TextBox tbNome;
+        private TextBox tbEstoque;
+        private TextBox tbMarca;
+        private TextBox tbProvedor;
+        private TextBox tbCategoria;
+        private TextBox tbPreco;
+        private Button btnHoverEditar;
     }
 }

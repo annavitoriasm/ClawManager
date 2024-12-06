@@ -122,7 +122,7 @@ namespace ClawManager
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            hideEdit();
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -130,18 +130,38 @@ namespace ClawManager
 
         }
 
-        private void showButtons()
+        private void showEdit()
         {
             SetButtonOpacity(btnCancel, 100);
             SetButtonOpacity(btnConfirm, 100);
+            SetButtonOpacity(btnHoverEditar, 100);
             btnCancel.ForeColor = Color.White;
             btnCancel.BackColor = Color.Transparent;
+            SetTextBoxVisibilityAndState(tbNome, 100);
+            tbNome.Text = lbNome.Text;
+            SetTextBoxVisibilityAndState(tbPreco, 100);
+            tbPreco.Text = lbPreco.Text;
+            SetTextBoxVisibilityAndState(tbEstoque, 100);
+            tbEstoque.Text = lbEstoque.Text;
+            SetTextBoxVisibilityAndState(tbMarca, 100);
+            tbMarca.Text = lbMarca.Text;
+            SetTextBoxVisibilityAndState(tbProvedor, 100);
+            tbProvedor.Text = lbProvedor.Text;
+            SetTextBoxVisibilityAndState(tbCategoria, 100);
+            tbCategoria.Text = lbCategoria.Text;
         }
 
-        public void hideButtons()
+        public void hideEdit()
         {
             SetButtonOpacity(btnCancel, 0);
             SetButtonOpacity(btnConfirm, 0);
+            SetButtonOpacity(btnHoverEditar, 0);
+            SetTextBoxVisibilityAndState(tbNome, 0);
+            SetTextBoxVisibilityAndState(tbPreco, 0);
+            SetTextBoxVisibilityAndState(tbEstoque, 0);
+            SetTextBoxVisibilityAndState(tbMarca, 0);
+            SetTextBoxVisibilityAndState(tbProvedor, 0);
+            SetTextBoxVisibilityAndState(tbCategoria, 0);
         }
 
         public void SetButtonOpacity(Button button, int opacity)
@@ -160,6 +180,21 @@ namespace ClawManager
             }
         }
 
+        public void SetTextBoxVisibilityAndState(TextBox textBox, int opacity)
+        {
+            int alpha = (int)(opacity * 2.55);
+
+            if (opacity == 0)
+            {
+                textBox.Enabled = false;
+                textBox.Visible = false;
+            }
+            else
+            {
+                textBox.Enabled = true;
+                textBox.Visible = true;
+            }
+        }
 
 
         private async void btnEditar_Click(object sender, EventArgs e)
@@ -192,7 +227,7 @@ namespace ClawManager
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            showButtons();
+            showEdit();
         }
     }
 }
