@@ -138,9 +138,38 @@ namespace ClawManager
             hideEdit();
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+        private async void btnConfirm_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int.TryParse(lbID.Text, out int prodID);
+                string nome = tbNome.Text;
+                string preco = tbPreco.Text;
+                string estoque = tbEstoque.Text;
+                string marca = tbMarca.Text;
+                string provedor = tbProvedor.Text;
+                string categoria = tbCategoria.Text;
+                string codigoBarras = tbCodigoBarras.Text;
+                string descricao = tbDescricao.Text;
+                string custo = tbCusto.Text;
+                string peso = tbPeso.Text;
+                string volume = tbVolume.Text;
+                string registro = tbRegis.Text;
+                string validade = tbValidade.Text;
 
+                CadProd cadProd = new CadProd();
+
+                await cadProd.editProd(prodID, nome, preco, estoque, marca, provedor, categoria,
+                    codigoBarras, descricao, custo, peso, volume, registro, validade);
+
+                MessageBox.Show("Produto atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ProdChanged?.Invoke();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao atualizar o produto: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void showEdit()
@@ -231,7 +260,7 @@ namespace ClawManager
         }
 
 
-        public event Action ProductDeleted;
+        public event Action ProdChanged;
         private async void btnEditar_Click(object sender, EventArgs e)
         {
             int.TryParse(lbID.Text, out int prodID);
@@ -250,7 +279,7 @@ namespace ClawManager
                 try
                 {
                     await cadProd.delProd(prodID);
-                    ProductDeleted?.Invoke();
+                    ProdChanged?.Invoke();
                     this.Close();
                 }
                 catch (Exception ex)

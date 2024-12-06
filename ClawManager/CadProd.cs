@@ -1,5 +1,11 @@
 using Stocku_.Db;
 using Npgsql;
+using Microsoft.Office.Interop.Excel;
+using Microsoft.Win32;
+using static Npgsql.Replication.PgOutput.Messages.RelationMessage;
+using System.Text.RegularExpressions;
+using System;
+using System.Globalization;
 
 namespace ManageProduct
 {
@@ -143,6 +149,60 @@ namespace ManageProduct
             catch (Exception ex)
             {
                 Console.WriteLine($"Error listando produtos: {ex.Message}");
+                throw;
+            }
+        }
+        public async Task editProd(int prodID, string name, string price, string qty, string brand, string supplier,
+        string category, string barCode, string description, string cost, string weight, string volume,
+        string registeredAt, string expirationDate)
+        {
+            try
+            {
+                if (C.Connection.State != System.Data.ConnectionState.Open)
+                {
+                    await C.Connection.OpenAsync();
+                }
+
+                string query = @"
+                UPDATE ""Product""
+                SET ""name"" = @name,
+                ""sellPrice"" = @price,
+                ""qty"" = @qty,
+                ""brand"" = @brand,
+                ""supplierID"" = @supplier,
+                ""category"" = @category,
+                ""barCode"" = @barCode,
+                ""description"" = @description,
+                ""costPrice"" = @cost,
+                ""weight"" = @weight,
+                ""volume"" = @volume,
+                ""registeredAt"" = @registeredAt,
+                ""expirationDate"" = @expirationDate
+                WHERE ""prodID"" = @prodID";
+
+                using (var cmd = new NpgsqlCommand(query, C.Connection))
+                {
+                    cmd.Parameters.AddWithValue("@prodID", prodID);
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@price", decimal.Parse(price.Replace("$", "")));
+                    cmd.Parameters.AddWithValue("@qty", int.Parse(qty));
+                    cmd.Parameters.AddWithValue("@brand", brand);
+                    cmd.Parameters.AddWithValue("@supplier", int.Parse(supplier));
+                    cmd.Parameters.AddWithValue("@category", category);
+                    cmd.Parameters.AddWithValue("@barCode", barCode);
+                    cmd.Parameters.AddWithValue("@description", description);
+                    cmd.Parameters.AddWithValue("@cost", decimal.Parse(cost.Replace("$", "")));
+                    cmd.Parameters.AddWithValue("@weight", decimal.Parse(weight));
+                    cmd.Parameters.AddWithValue("@volume", decimal.Parse(volume));
+                    cmd.Parameters.AddWithValue("@registeredAt", DateTime.Now);
+                    cmd.Parameters.AddWithValue("@expirationDate", DateOnly.ParseExact(expirationDate, "dd/MM/yyyy", CultureInfo.InvariantCulture));
+
+                    await cmd.ExecuteNonQueryAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao atualizar o produto: {ex.Message}");
                 throw;
             }
         }

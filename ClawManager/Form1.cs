@@ -58,7 +58,7 @@ namespace ClawManager
                     var viewProd = new ViewProduct();
                     viewProd.SetAttributes(selectedItem.Text, nome, preco, qtd, marca, forne, categoria, codBarras, descricao, custo, peso, volume, registro, validade);
                     viewProd.hideEdit();
-                    viewProd.ProductDeleted += async () => await LoadProductsAsync();
+                    viewProd.ProdChanged += async () => await LoadProductsAsync();
                     viewProd.ShowDialog();
                 }
             };
