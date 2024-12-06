@@ -39,12 +39,18 @@
             pictureBox5 = new PictureBox();
             pictureBox3 = new PictureBox();
             genSheet = new Button();
+            panel2 = new Panel();
+            label2 = new Label();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnFornecedor
@@ -76,6 +82,7 @@
             btnProdutos.Text = "Produtos";
             btnProdutos.TextAlign = ContentAlignment.MiddleLeft;
             btnProdutos.UseVisualStyleBackColor = true;
+            btnProdutos.Click += btnProdutos_Click;
             // 
             // btnDashboar
             // 
@@ -160,13 +167,63 @@
             // 
             // genSheet
             // 
-            genSheet.Location = new Point(802, 154);
+            genSheet.BackColor = Color.FromArgb(196, 165, 237);
+            genSheet.FlatAppearance.BorderSize = 0;
+            genSheet.FlatStyle = FlatStyle.Flat;
+            genSheet.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            genSheet.Location = new Point(21, 244);
             genSheet.Name = "genSheet";
-            genSheet.Size = new Size(112, 43);
+            genSheet.Size = new Size(208, 31);
             genSheet.TabIndex = 2;
             genSheet.Text = "Gerar";
-            genSheet.UseVisualStyleBackColor = true;
+            genSheet.UseVisualStyleBackColor = false;
             genSheet.Click += genSheet_Click;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(73, 53, 83);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(pictureBox1);
+            panel2.Controls.Add(genSheet);
+            panel2.Location = new Point(165, 24);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(252, 313);
+            panel2.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10F);
+            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.Location = new Point(29, 170);
+            label2.Name = "label2";
+            label2.Size = new Size(185, 57);
+            label2.TabIndex = 15;
+            label2.Text = "Gerar planilha com todos os \r\nprodutos cadastrados em \r\nformato excel.";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.Click += label2_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(29, 130);
+            label1.Name = "label1";
+            label1.Size = new Size(200, 32);
+            label1.TabIndex = 14;
+            label1.Text = "Exportar Planilha";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(87, 49);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(70, 70);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 13;
+            pictureBox1.TabStop = false;
             // 
             // Dashboard
             // 
@@ -174,18 +231,25 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(43, 27, 50);
             ClientSize = new Size(1368, 701);
-            Controls.Add(genSheet);
+            Controls.Add(panel2);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MdiChildrenMinimizedAnchorBottom = false;
             Name = "Dashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashboard";
+            TopMost = true;
+            WindowState = FormWindowState.Maximized;
+            Load += Dashboard_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -201,5 +265,9 @@
         private PictureBox pictureBox5;
         private PictureBox pictureBox3;
         private Button genSheet;
+        private Panel panel2;
+        private Label label2;
+        private Label label1;
+        private PictureBox pictureBox1;
     }
 }

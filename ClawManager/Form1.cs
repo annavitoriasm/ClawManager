@@ -1,10 +1,11 @@
 using ManageProduct;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ClawManager
 {
     public partial class Form1 : Form
     {
-        private ListView listViewProducts;
+        public ListView listViewProducts;
 
         public Form1()
         {
@@ -150,7 +151,7 @@ namespace ClawManager
 
         private async void btnFornecedor_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private List<ListViewItem> originalItemList = new List<ListViewItem>(); //fiz um clone pra não afetar a lista original
@@ -196,6 +197,11 @@ namespace ClawManager
             }
         }
 
-
+        private void btnDashboar_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
+        }
     }
 }

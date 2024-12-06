@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using OfficeOpenXml;
 using Stocku_.Db;
 using ManageProduct;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ClawManager
 {
@@ -87,6 +88,35 @@ namespace ClawManager
         private void genSheet_Click(object sender, EventArgs e)
         {
             ExportToExcel();
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProdutos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Form1 form1 = new Form1();
+                form1.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro ao abrir o Form1: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
