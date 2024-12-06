@@ -1,4 +1,6 @@
 using ManageProduct;
+using Microsoft.Win32;
+using static Npgsql.Replication.PgOutput.Messages.RelationMessage;
 
 namespace ClawManager
 {
@@ -46,8 +48,15 @@ namespace ClawManager
                     var marca = selectedItem.SubItems[4].Text;
                     var forne = selectedItem.SubItems[5].Text;
                     var categoria = selectedItem.SubItems[6].Text;
+                    var codBarras = selectedItem.SubItems[7].Text;
+                    var descricao = selectedItem.SubItems[8].Text;
+                    var custo = selectedItem.SubItems[9].Text;
+                    var peso = selectedItem.SubItems[10].Text;
+                    var volume = selectedItem.SubItems[11].Text;
+                    var registro = selectedItem.SubItems[12].Text;
+                    var validade = selectedItem.SubItems[13].Text;
                     var viewProd = new ViewProduct();
-                    viewProd.SetAttributes(selectedItem.Text, nome, preco, qtd, marca, forne, categoria);
+                    viewProd.SetAttributes(selectedItem.Text, nome, preco, qtd, marca, forne, categoria, codBarras, descricao, custo, peso, volume, registro, validade);
                     viewProd.hideEdit();
                     viewProd.ProductDeleted += async () => await LoadProductsAsync();
                     viewProd.ShowDialog();
@@ -150,7 +159,7 @@ namespace ClawManager
 
         private async void btnFornecedor_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private List<ListViewItem> originalItemList = new List<ListViewItem>(); //fiz um clone pra não afetar a lista original
@@ -196,6 +205,9 @@ namespace ClawManager
             }
         }
 
+        private void btnDashboar_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -89,8 +89,8 @@ namespace ClawManager
         {
         }
 
-        public void SetAttributes(string id, string nome, string preco, string qtd,
-            string marca, string forne, string categoria)
+        public void SetAttributes(string id, string nome, string preco, string qtd, string marca, string forne, string categoria,
+            string codBarras, string descricao, string custo, string peso, string volume, string registro, string validade)
         {
             ClearAttributes();
             lbID.Text = id;
@@ -100,7 +100,13 @@ namespace ClawManager
             lbMarca.Text = marca;
             lbProvedor.Text = forne;
             lbCategoria.Text = categoria;
-
+            lbCodigoBarras.Text = codBarras;
+            lbDescricao.Text = descricao;
+            lbCusto.Text = custo;
+            lbPeso.Text = peso;
+            lbVolume.Text = volume;
+            lbRegis.Text = registro;
+            lbValidade.Text = validade;
         }
 
         public void ClearAttributes()
@@ -112,8 +118,15 @@ namespace ClawManager
             lbMarca.Text = null;
             lbProvedor.Text = null;
             lbCategoria.Text = null;
-
+            lbCodigoBarras.Text = null;
+            lbDescricao.Text = null;
+            lbCusto.Text = null;
+            lbPeso.Text = null;
+            lbVolume.Text = null;
+            lbRegis.Text = null;
+            lbValidade.Text = null;
         }
+
 
         private void panel14_Paint(object sender, PaintEventArgs e)
         {
@@ -149,6 +162,20 @@ namespace ClawManager
             tbProvedor.Text = lbProvedor.Text;
             SetTextBoxVisibilityAndState(tbCategoria, 100);
             tbCategoria.Text = lbCategoria.Text;
+            SetTextBoxVisibilityAndState(tbCodigoBarras, 100);
+            tbCodigoBarras.Text = lbCodigoBarras.Text;
+            SetTextBoxVisibilityAndState(tbDescricao, 100);
+            tbDescricao.Text = lbDescricao.Text;
+            SetTextBoxVisibilityAndState(tbCusto, 100);
+            tbCusto.Text = lbCusto.Text;
+            SetTextBoxVisibilityAndState(tbPeso, 100);
+            tbPeso.Text = lbPeso.Text;
+            SetTextBoxVisibilityAndState(tbVolume, 100);
+            tbVolume.Text = lbVolume.Text;
+            SetTextBoxVisibilityAndState(tbRegis, 100);
+            tbRegis.Text = lbRegis.Text;
+            SetTextBoxVisibilityAndState(tbValidade, 100);
+            tbValidade.Text = lbValidade.Text;
         }
 
         public void hideEdit()
@@ -162,6 +189,13 @@ namespace ClawManager
             SetTextBoxVisibilityAndState(tbMarca, 0);
             SetTextBoxVisibilityAndState(tbProvedor, 0);
             SetTextBoxVisibilityAndState(tbCategoria, 0);
+            SetTextBoxVisibilityAndState(tbCodigoBarras, 0);
+            SetTextBoxVisibilityAndState(tbDescricao, 0);
+            SetTextBoxVisibilityAndState(tbCusto, 0);
+            SetTextBoxVisibilityAndState(tbPeso, 0);
+            SetTextBoxVisibilityAndState(tbVolume, 0);
+            SetTextBoxVisibilityAndState(tbRegis, 0);
+            SetTextBoxVisibilityAndState(tbValidade, 0);
         }
 
         public void SetButtonOpacity(Button button, int opacity)
@@ -229,6 +263,21 @@ namespace ClawManager
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             showEdit();
+        }
+
+        private void tbPreco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbCodigoBarras_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbRegis_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -52,6 +52,12 @@ namespace ManageProduct
                     item.SubItems.Add(product.SupplierID.ToString());
                     item.SubItems.Add(product.Category);
                     item.SubItems.Add(product.BarCode);
+                    item.SubItems.Add(product.Description);
+                    item.SubItems.Add(product.Cost.ToString("C"));
+                    item.SubItems.Add(product.Weight.ToString());
+                    item.SubItems.Add(product.Volume.ToString());
+                    item.SubItems.Add(product.RegisteredAt.ToString());
+                    item.SubItems.Add(product.ExpirationDate.ToString());
 
                     listView.Items.Add(item);
                 }
@@ -80,14 +86,22 @@ namespace ManageProduct
                     {
                         listView.View = View.Details;
                         listView.Columns.Clear();
-                        listView.Columns.Add("ID",73);
-                        listView.Columns.Add("Nome",237);
+                        listView.Columns.Add("ID", 73);
+                        listView.Columns.Add("Nome", 237);
                         listView.Columns.Add("Preço", 120);
                         listView.Columns.Add("Quantidade", 100);
                         listView.Columns.Add("Marca", 175);
                         listView.Columns.Add("Fornecedor", 175);
-                        listView.Columns.Add("Categoria",180);
-                        listView.Columns.Add("Código de Barras",0);
+                        listView.Columns.Add("Categoria", 180);
+                        listView.Columns.Add("Código de Barras", 0);
+                        listView.Columns.Add("Descrição", 0);
+                        listView.Columns.Add("Custo", 0);
+                        listView.Columns.Add("Peso", 0);
+                        listView.Columns.Add("Volume", 0);
+                        listView.Columns.Add("Registro", 0);
+                        listView.Columns.Add("Validade", 0);
+
+
                         listView.TileSize = new Size(1, 50);
 
                         listView.Items.Clear();
@@ -103,6 +117,17 @@ namespace ManageProduct
                             item.SubItems.Add(reader["brand"]?.ToString() ?? "");
                             item.SubItems.Add(reader["supplierID"]?.ToString() ?? "");
                             item.SubItems.Add(reader["category"]?.ToString() ?? "");
+                            item.SubItems.Add(reader["barCode"]?.ToString() ?? "");
+                            item.SubItems.Add(reader["description"]?.ToString() ?? "");
+                            item.SubItems.Add(reader["costPrice"] != DBNull.Value
+                                 ? Convert.ToDecimal(reader["costPrice"]).ToString("C") : "");
+                            item.SubItems.Add(reader["weight"] != DBNull.Value
+                                 ? Convert.ToDecimal(reader["weight"]).ToString("") : "");
+                            item.SubItems.Add(reader["volume"] != DBNull.Value
+                                 ? Convert.ToDecimal(reader["volume"]).ToString("") : "");
+                            item.SubItems.Add(reader["registeredAt"]?.ToString() ?? "");
+                            item.SubItems.Add(reader["expirationDate"]?.ToString() ?? "");
+
 
                             listView.Items.Add(item);
                         }

@@ -32,8 +32,8 @@
             lbNome = new Label();
             btnCloseView = new Button();
             lbCodigoBarras = new Label();
-            lbRegistro = new Label();
-            label2 = new Label();
+            tbRegistro = new Label();
+            lbValidade = new Label();
             lbPeso = new Label();
             lbPreco = new Label();
             lbEstoque = new Label();
@@ -42,17 +42,23 @@
             lbMarca = new Label();
             lbProvedor = new Label();
             lbCategoria = new Label();
-            lbObservacoes = new Label();
+            lbDescricao = new Label();
             panel1 = new Panel();
+            tbCodigoBarras = new TextBox();
             panel2 = new Panel();
+            tbRegis = new TextBox();
             panel3 = new Panel();
+            tbValidade = new TextBox();
             panel4 = new Panel();
+            tbCusto = new TextBox();
             panel5 = new Panel();
             tbPreco = new TextBox();
             panel6 = new Panel();
             tbEstoque = new TextBox();
             panel7 = new Panel();
+            tbPeso = new TextBox();
             panel8 = new Panel();
+            tbVolume = new TextBox();
             panel9 = new Panel();
             tbMarca = new TextBox();
             panel10 = new Panel();
@@ -60,6 +66,7 @@
             panel11 = new Panel();
             tbCategoria = new TextBox();
             panel12 = new Panel();
+            tbDescricao = new TextBox();
             label1 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -82,6 +89,7 @@
             btnConfirm = new Button();
             btnCancel = new Button();
             btnHoverEditar = new Button();
+            lbRegis = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -134,27 +142,26 @@
             lbCodigoBarras.Text = "99999/999/888";
             lbCodigoBarras.Click += lbCodigoBarras_Click;
             // 
-            // lbRegistro
+            // tbRegistro
             // 
-            lbRegistro.AutoSize = true;
-            lbRegistro.Font = new Font("Segoe UI", 12F);
-            lbRegistro.Location = new Point(7, 1);
-            lbRegistro.Name = "lbRegistro";
-            lbRegistro.Size = new Size(94, 21);
-            lbRegistro.TabIndex = 3;
-            lbRegistro.Text = "20/12/2024";
-            lbRegistro.Click += lbRegistro_Click;
+            tbRegistro.AutoSize = true;
+            tbRegistro.Font = new Font("Segoe UI", 12F);
+            tbRegistro.Location = new Point(7, 1);
+            tbRegistro.Name = "tbRegistro";
+            tbRegistro.Size = new Size(0, 21);
+            tbRegistro.TabIndex = 3;
+            tbRegistro.Click += lbRegistro_Click;
             // 
-            // label2
+            // lbValidade
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(10, 1);
-            label2.Name = "label2";
-            label2.Size = new Size(88, 21);
-            label2.TabIndex = 4;
-            label2.Text = "Não consta";
-            label2.Click += label2_Click;
+            lbValidade.AutoSize = true;
+            lbValidade.Font = new Font("Segoe UI", 12F);
+            lbValidade.Location = new Point(10, 1);
+            lbValidade.Name = "lbValidade";
+            lbValidade.Size = new Size(88, 21);
+            lbValidade.TabIndex = 4;
+            lbValidade.Text = "Não consta";
+            lbValidade.Click += label2_Click;
             // 
             // lbPeso
             // 
@@ -227,7 +234,7 @@
             // 
             lbProvedor.AutoSize = true;
             lbProvedor.Font = new Font("Segoe UI", 12F);
-            lbProvedor.Location = new Point(3, 1);
+            lbProvedor.Location = new Point(3, 2);
             lbProvedor.Name = "lbProvedor";
             lbProvedor.Size = new Size(110, 21);
             lbProvedor.TabIndex = 11;
@@ -244,51 +251,102 @@
             lbCategoria.TabIndex = 12;
             lbCategoria.Text = "Industrializados, Doces";
             // 
-            // lbObservacoes
+            // lbDescricao
             // 
-            lbObservacoes.AutoSize = true;
-            lbObservacoes.Font = new Font("Segoe UI", 12F);
-            lbObservacoes.Location = new Point(3, 1);
-            lbObservacoes.Name = "lbObservacoes";
-            lbObservacoes.Size = new Size(349, 21);
-            lbObservacoes.TabIndex = 13;
-            lbObservacoes.Text = "Promoção com -5% de desconto toda sexta-feira.";
+            lbDescricao.AutoSize = true;
+            lbDescricao.Font = new Font("Segoe UI", 12F);
+            lbDescricao.Location = new Point(3, 1);
+            lbDescricao.Name = "lbDescricao";
+            lbDescricao.Size = new Size(349, 21);
+            lbDescricao.TabIndex = 13;
+            lbDescricao.Text = "Promoção com -5% de desconto toda sexta-feira.";
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(62, 41, 71);
+            panel1.Controls.Add(tbCodigoBarras);
             panel1.Controls.Add(lbCodigoBarras);
             panel1.Location = new Point(11, 25);
             panel1.Name = "panel1";
             panel1.Size = new Size(328, 25);
             panel1.TabIndex = 14;
             // 
+            // tbCodigoBarras
+            // 
+            tbCodigoBarras.BackColor = Color.FromArgb(62, 41, 71);
+            tbCodigoBarras.BorderStyle = BorderStyle.None;
+            tbCodigoBarras.Font = new Font("Segoe UI", 12F);
+            tbCodigoBarras.ForeColor = Color.White;
+            tbCodigoBarras.Location = new Point(5, 2);
+            tbCodigoBarras.Name = "tbCodigoBarras";
+            tbCodigoBarras.Size = new Size(167, 22);
+            tbCodigoBarras.TabIndex = 38;
+            tbCodigoBarras.TextChanged += tbCodigoBarras_TextChanged;
+            // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(62, 41, 71);
-            panel2.Controls.Add(lbRegistro);
+            panel2.Controls.Add(tbRegis);
+            panel2.Controls.Add(tbRegistro);
+            panel2.Controls.Add(lbRegis);
             panel2.Location = new Point(357, 25);
             panel2.Name = "panel2";
             panel2.Size = new Size(108, 25);
             panel2.TabIndex = 15;
             // 
+            // tbRegis
+            // 
+            tbRegis.BackColor = Color.FromArgb(62, 41, 71);
+            tbRegis.BorderStyle = BorderStyle.None;
+            tbRegis.Font = new Font("Segoe UI", 12F);
+            tbRegis.ForeColor = Color.White;
+            tbRegis.Location = new Point(4, 2);
+            tbRegis.Name = "tbRegis";
+            tbRegis.Size = new Size(99, 22);
+            tbRegis.TabIndex = 38;
+            tbRegis.TextChanged += tbRegis_TextChanged;
+            // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(62, 41, 71);
-            panel3.Controls.Add(label2);
+            panel3.Controls.Add(tbValidade);
+            panel3.Controls.Add(lbValidade);
             panel3.Location = new Point(485, 25);
             panel3.Name = "panel3";
             panel3.Size = new Size(108, 25);
             panel3.TabIndex = 16;
             // 
+            // tbValidade
+            // 
+            tbValidade.BackColor = Color.FromArgb(62, 41, 71);
+            tbValidade.BorderStyle = BorderStyle.None;
+            tbValidade.Font = new Font("Segoe UI", 12F);
+            tbValidade.ForeColor = Color.White;
+            tbValidade.Location = new Point(5, 2);
+            tbValidade.Name = "tbValidade";
+            tbValidade.Size = new Size(99, 22);
+            tbValidade.TabIndex = 38;
+            // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(62, 41, 71);
+            panel4.Controls.Add(tbCusto);
             panel4.Controls.Add(lbCusto);
             panel4.Location = new Point(11, 90);
             panel4.Name = "panel4";
             panel4.Size = new Size(108, 25);
             panel4.TabIndex = 16;
+            // 
+            // tbCusto
+            // 
+            tbCusto.BackColor = Color.FromArgb(62, 41, 71);
+            tbCusto.BorderStyle = BorderStyle.None;
+            tbCusto.Font = new Font("Segoe UI", 12F);
+            tbCusto.ForeColor = Color.White;
+            tbCusto.Location = new Point(5, 2);
+            tbCusto.Name = "tbCusto";
+            tbCusto.Size = new Size(99, 22);
+            tbCusto.TabIndex = 39;
             // 
             // panel5
             // 
@@ -310,6 +368,7 @@
             tbPreco.Name = "tbPreco";
             tbPreco.Size = new Size(99, 22);
             tbPreco.TabIndex = 37;
+            tbPreco.TextChanged += tbPreco_TextChanged;
             // 
             // panel6
             // 
@@ -335,20 +394,44 @@
             // panel7
             // 
             panel7.BackColor = Color.FromArgb(62, 41, 71);
+            panel7.Controls.Add(tbPeso);
             panel7.Controls.Add(lbPeso);
             panel7.Location = new Point(403, 90);
             panel7.Name = "panel7";
             panel7.Size = new Size(85, 25);
             panel7.TabIndex = 18;
             // 
+            // tbPeso
+            // 
+            tbPeso.BackColor = Color.FromArgb(62, 41, 71);
+            tbPeso.BorderStyle = BorderStyle.None;
+            tbPeso.Font = new Font("Segoe UI", 12F);
+            tbPeso.ForeColor = Color.White;
+            tbPeso.Location = new Point(3, 2);
+            tbPeso.Name = "tbPeso";
+            tbPeso.Size = new Size(79, 22);
+            tbPeso.TabIndex = 38;
+            // 
             // panel8
             // 
             panel8.BackColor = Color.FromArgb(62, 41, 71);
+            panel8.Controls.Add(tbVolume);
             panel8.Controls.Add(lbVolume);
             panel8.Location = new Point(508, 90);
             panel8.Name = "panel8";
             panel8.Size = new Size(85, 25);
             panel8.TabIndex = 19;
+            // 
+            // tbVolume
+            // 
+            tbVolume.BackColor = Color.FromArgb(62, 41, 71);
+            tbVolume.BorderStyle = BorderStyle.None;
+            tbVolume.Font = new Font("Segoe UI", 12F);
+            tbVolume.ForeColor = Color.White;
+            tbVolume.Location = new Point(5, 2);
+            tbVolume.Name = "tbVolume";
+            tbVolume.Size = new Size(79, 22);
+            tbVolume.TabIndex = 38;
             // 
             // panel9
             // 
@@ -387,7 +470,7 @@
             tbProvedor.BorderStyle = BorderStyle.None;
             tbProvedor.Font = new Font("Segoe UI", 12F);
             tbProvedor.ForeColor = Color.White;
-            tbProvedor.Location = new Point(7, 1);
+            tbProvedor.Location = new Point(5, 2);
             tbProvedor.Name = "tbProvedor";
             tbProvedor.Size = new Size(272, 22);
             tbProvedor.TabIndex = 40;
@@ -416,11 +499,23 @@
             // panel12
             // 
             panel12.BackColor = Color.FromArgb(62, 41, 71);
-            panel12.Controls.Add(lbObservacoes);
+            panel12.Controls.Add(tbDescricao);
+            panel12.Controls.Add(lbDescricao);
             panel12.Location = new Point(11, 293);
             panel12.Name = "panel12";
             panel12.Size = new Size(582, 25);
             panel12.TabIndex = 16;
+            // 
+            // tbDescricao
+            // 
+            tbDescricao.BackColor = Color.FromArgb(62, 41, 71);
+            tbDescricao.BorderStyle = BorderStyle.None;
+            tbDescricao.Font = new Font("Segoe UI", 12F);
+            tbDescricao.ForeColor = Color.White;
+            tbDescricao.Location = new Point(4, 2);
+            tbDescricao.Name = "tbDescricao";
+            tbDescricao.Size = new Size(569, 22);
+            tbDescricao.TabIndex = 38;
             // 
             // label1
             // 
@@ -679,6 +774,16 @@
             btnHoverEditar.TabIndex = 40;
             btnHoverEditar.UseVisualStyleBackColor = false;
             // 
+            // lbRegis
+            // 
+            lbRegis.AutoSize = true;
+            lbRegis.Font = new Font("Segoe UI", 12F);
+            lbRegis.Location = new Point(3, 1);
+            lbRegis.Name = "lbRegis";
+            lbRegis.Size = new Size(92, 21);
+            lbRegis.TabIndex = 39;
+            lbRegis.Text = "Dias Branco";
+            // 
             // ViewProduct
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -738,8 +843,8 @@
         private Label lbNome;
         private Button btnCloseView;
         private Label lbCodigoBarras;
-        private Label lbRegistro;
-        private Label label2;
+        private Label tbRegistro;
+        private Label lbValidade;
         private Label lbPeso;
         private Label lbPreco;
         private Label lbEstoque;
@@ -748,7 +853,7 @@
         private Label lbMarca;
         private Label lbProvedor;
         private Label lbCategoria;
-        private Label lbObservacoes;
+        private Label lbDescricao;
         private Panel panel1;
         private Panel panel2;
         private Panel panel3;
@@ -788,5 +893,13 @@
         private TextBox tbCategoria;
         private TextBox tbPreco;
         private Button btnHoverEditar;
+        private TextBox tbCodigoBarras;
+        private TextBox tbRegis;
+        private TextBox tbValidade;
+        private TextBox tbCusto;
+        private TextBox tbPeso;
+        private TextBox tbVolume;
+        private TextBox tbDescricao;
+        private Label lbRegis;
     }
 }
