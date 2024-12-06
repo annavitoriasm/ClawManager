@@ -6,7 +6,7 @@ namespace ClawManager
 {
     public partial class Form1 : Form
     {
-        private ListView listViewProducts;
+        public ListView listViewProducts;
 
         public Form1()
         {
@@ -208,6 +208,14 @@ namespace ClawManager
         private void btnDashboar_Click(object sender, EventArgs e)
         {
 
+        }
+    }
+}
+        private void btnDashboar_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
         }
     }
 }

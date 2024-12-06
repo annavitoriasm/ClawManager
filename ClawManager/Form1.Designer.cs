@@ -156,6 +156,7 @@
             btnDashboar.Text = "Dashboard";
             btnDashboar.TextAlign = ContentAlignment.MiddleLeft;
             btnDashboar.UseVisualStyleBackColor = true;
+            btnDashboar.Click += btnDashboar_Click;
             // 
             // pictureBox4
             // 
@@ -363,6 +364,8 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ClawManager - Home";
+            TopMost = true;
+            WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
