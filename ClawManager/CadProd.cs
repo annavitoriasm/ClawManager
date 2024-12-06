@@ -140,5 +140,54 @@ namespace ManageProduct
                 MessageBox.Show($"Erro ao excluir o produto: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public async Task<List<string[]>> genListProd()
+        {
+            try
+            {
+                if (C.Connection.State != System.Data.ConnectionState.Open)
+                {
+                    await C.Connection.OpenAsync();
+                }
+
+                // Cria uma lista para armazenar os dados dos produtos
+                List<string[]> productList = new List<string[]>();
+
+                string query = "SELECT \"prodID\", \"name\", \"description\", \"category\", \"supplierID\", \"qty\", \"brand\", \"costPrice\", \"sellPrice\", \"weight\", \"volume\", \"expirationDate\", \"registeredAt\", \"barCode\" FROM \"Product\"";
+
+                using (var cmd = new NpgsqlCommand(query, C.Connection))
+                {
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        // Itera sobre os resultados da consulta
+                        while (await reader.ReadAsync())
+                        {
+                            // Adiciona os dados de cada produto na lista
+                            string[] productData = new string[9]; // Array para armazenar os dados de um produto
+                            productData[0] = reader["prodID"].ToString();
+                            productData[1] = reader["name"]?.ToString() ?? "";
+                            productData[2] = reader["description"]?.ToString() ?? "";
+                            productData[3] = reader["category"]?.ToString() ?? "";
+                            productData[4] = reader["supplierID"]?.ToString() ?? "";
+                            productData[5] = reader["qty"] != DBNull.Value
+                                ? Convert.ToInt32(reader["qty"]).ToString() : "";
+                            productData[6] = reader["brand"]?.ToString() ?? "";
+                            productData[7] = reader["sellPrice"] != DBNull.Value
+                                ? Convert.ToDecimal(reader["sellPrice"]).ToString("C") : "";
+                            productData[8] = reader["barCode"]?.ToString() ?? "";
+
+                            productList.Add(productData);
+                        }
+                    }
+                }
+
+                // Retorna a lista de arrays de produtos
+                return productList;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao gerar o array de produtos: {ex.Message}");
+                throw;
+            }
+        }
     }
 }
