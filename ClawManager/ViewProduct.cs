@@ -134,6 +134,8 @@ namespace ClawManager
         {
             SetButtonOpacity(btnCancel, 100);
             SetButtonOpacity(btnConfirm, 100);
+            btnCancel.ForeColor = Color.White;
+            btnCancel.BackColor = Color.Transparent;
         }
 
         public void hideButtons()
@@ -145,14 +147,6 @@ namespace ClawManager
         public void SetButtonOpacity(Button button, int opacity)
         {
             int alpha = (int)(opacity * 2.55);
-
-            button.Paint += (sender, e) =>
-            {
-                using (var brush = new SolidBrush(Color.FromArgb(alpha, button.BackColor)))
-                {
-                    e.Graphics.FillRectangle(brush, 0, 0, button.Width, button.Height);
-                }
-            };
 
             if (opacity == 0)
             {
@@ -197,7 +191,7 @@ namespace ClawManager
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-
+            showButtons();
         }
     }
 }
