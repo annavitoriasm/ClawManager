@@ -93,7 +93,7 @@ namespace ClawManager
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -104,7 +104,7 @@ namespace ClawManager
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            FilterListView();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -146,5 +146,55 @@ namespace ClawManager
         {
 
         }
+
+        private async void btnFornecedor_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private List<ListViewItem> originalItemList = new List<ListViewItem>(); //fiz um clone pra não afetar a lista original
+
+        private void InitializeListView()
+        {
+            if (originalItemList.Count == 0)
+            {
+                foreach (ListViewItem item in listViewProducts.Items)
+                {
+                    originalItemList.Add((ListViewItem)item.Clone());
+                }
+            }
+        }
+
+        private void FilterListView()
+        {
+            InitializeListView();
+
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                listViewProducts.Items.Clear();
+                foreach (var item in originalItemList)
+                {
+                    listViewProducts.Items.Add(item);
+                }
+            }
+            else
+            {
+                List<ListViewItem> itemsToRemove = new List<ListViewItem>();
+
+                foreach (ListViewItem item in listViewProducts.Items)
+                {
+                    if (!item.SubItems[1].Text.ToLower().Contains(textBox1.Text.ToLower()))
+                    {
+                        itemsToRemove.Add(item);
+                    }
+                }
+                foreach (ListViewItem item in itemsToRemove)
+                {
+                    listViewProducts.Items.Remove(item);
+                }
+            }
+        }
+
+
     }
 }

@@ -22,12 +22,27 @@ namespace ClawManager
 
         }
 
-        private void Alert_Load(object sender, EventArgs e)
+        public void Alert_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void CustomAlert(string title, string description, Action buttonConfirm, Action buttonCancel)
+         void lbPlace1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+         void lbPlace2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void CustomAlert(string title, string description, Action buttonConfirm, Action buttonCancel)
         {
             lbPlace1.Text = title;
             lbPlace2.Text = description;
@@ -45,16 +60,6 @@ namespace ClawManager
                 this.Close();
             };
 
-            
-        }
-
-        private void lbPlace1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
 
         }
     }

@@ -45,7 +45,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(84, 189);
+            button1.Location = new Point(83, 176);
             button1.Name = "button1";
             button1.Size = new Size(140, 23);
             button1.TabIndex = 0;
@@ -56,7 +56,7 @@
             // panel1
             // 
             panel1.Controls.Add(lbPlace1);
-            panel1.Location = new Point(12, 12);
+            panel1.Location = new Point(12, 36);
             panel1.Name = "panel1";
             panel1.Size = new Size(289, 37);
             panel1.TabIndex = 1;
@@ -66,7 +66,7 @@
             lbPlace1.AutoSize = true;
             lbPlace1.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
             lbPlace1.ForeColor = SystemColors.ButtonHighlight;
-            lbPlace1.Location = new Point(109, 7);
+            lbPlace1.Location = new Point(3, 7);
             lbPlace1.Name = "lbPlace1";
             lbPlace1.Size = new Size(73, 30);
             lbPlace1.TabIndex = 0;
@@ -77,7 +77,7 @@
             // panel2
             // 
             panel2.Controls.Add(lbPlace2);
-            panel2.Location = new Point(12, 74);
+            panel2.Location = new Point(12, 78);
             panel2.Name = "panel2";
             panel2.Size = new Size(289, 65);
             panel2.TabIndex = 2;
@@ -92,6 +92,7 @@
             lbPlace2.Size = new Size(112, 25);
             lbPlace2.TabIndex = 1;
             lbPlace2.Text = "Placeholder";
+            lbPlace2.Click += lbPlace2_Click;
             // 
             // button2
             // 
@@ -100,7 +101,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(84, 221);
+            button2.Location = new Point(83, 210);
             button2.Name = "button2";
             button2.Size = new Size(140, 23);
             button2.TabIndex = 3;

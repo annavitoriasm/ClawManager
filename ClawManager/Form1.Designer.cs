@@ -125,6 +125,7 @@
             btnFornecedor.Text = "Fornecedores";
             btnFornecedor.TextAlign = ContentAlignment.MiddleLeft;
             btnFornecedor.UseVisualStyleBackColor = true;
+            btnFornecedor.Click += btnFornecedor_Click;
             // 
             // btnProdutos
             // 
@@ -337,9 +338,9 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(196, 165, 237);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1232, 28);
+            pictureBox2.Location = new Point(1232, 30);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(22, 22);
+            pictureBox2.Size = new Size(18, 18);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
