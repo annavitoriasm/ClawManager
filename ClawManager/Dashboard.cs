@@ -110,7 +110,7 @@ namespace ClawManager
             try
             {
                 Form1 form1 = new Form1();
-                form1.Show();
+                form1.ShowDialog();
                 this.Hide();
             }
             catch (Exception ex)
