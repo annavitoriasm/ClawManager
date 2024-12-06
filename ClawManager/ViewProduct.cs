@@ -166,6 +166,7 @@ namespace ClawManager
             }
         }
 
+        public event Action ProductDeleted;
         private async void btnEditar_Click(object sender, EventArgs e)
         {
             int.TryParse(lbID.Text, out int prodID);
@@ -184,7 +185,7 @@ namespace ClawManager
                 try
                 {
                     await cadProd.delProd(prodID);
-
+                    ProductDeleted?.Invoke();
                     this.Close();
                 }
                 catch (Exception ex)
