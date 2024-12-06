@@ -180,6 +180,23 @@ namespace ClawManager
             }
         }
 
+        public void SetTextBoxVisibilityAndState(TextBox textBox, int opacity)
+        {
+            int alpha = (int)(opacity * 2.55);
+
+            if (opacity == 0)
+            {
+                textBox.Enabled = false;
+                textBox.Visible = false;
+            }
+            else
+            {
+                textBox.Enabled = true;
+                textBox.Visible = true;
+            }
+        }
+
+
         public event Action ProductDeleted;
         private async void btnEditar_Click(object sender, EventArgs e)
         {
