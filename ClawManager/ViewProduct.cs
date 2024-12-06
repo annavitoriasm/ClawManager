@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManageProduct;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -165,7 +166,37 @@ namespace ClawManager
             }
         }
 
+        private async void btnEditar_Click(object sender, EventArgs e)
+        {
+            int.TryParse(lbID.Text, out int prodID);
 
+            var confirmResult = MessageBox.Show(
+                "Tem certeza de que deseja excluir este produto?",
+                "Confirmar Exclusão",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
 
+            if (confirmResult == DialogResult.Yes)
+            {
+                CadProd cadProd = new CadProd();
+
+                try
+                {
+                    await cadProd.delProd(prodID);
+
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao excluir o produto: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
